@@ -1,0 +1,274 @@
+body {
+  background: #f5f5f5;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+.stats-card{
+    transition:.3s;
+    border-radius:20px;
+}
+
+.stats-card:hover{
+    transform:translateY(-8px);
+}
+
+.stats-card h2{
+    font-size:40px;
+}
+
+.stats-card h3{
+    font-size:32px;
+}
+.hero-section{
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5,
+        #7c3aed
+    );
+
+    border-radius:20px;
+    padding:60px 30px;
+    text-align:center;
+}
+
+.hero-title{
+    color:#ffffff;
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-subtitle{
+    color:#f8f9fa;
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.hero-description{
+    color:#e9ecef;
+    font-size:1rem;
+}
+
+.hero-section .badge{
+    border-radius:50px;
+}
+.nav-pills .nav-link{
+    border-radius:40px;
+    margin:5px;
+    transition:.3s;
+}
+
+.nav-pills .nav-link.active{
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+}
+
+.nav-pills .nav-link:hover{
+    transform:translateY(-2px);
+}
+.image-card{
+    transition: all .3s ease;
+    border-radius:18px;
+}
+
+.image-card:hover{
+    transform: translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.preview-image{
+    height:220px;
+    object-fit:cover;
+    border-radius:18px 18px 0 0;
+}
+.result-card{
+transition:.3s ease;
+}
+
+.result-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,.18)!important;
+}
+
+.result-image{
+transition:.4s;
+}
+
+.result-card:hover .result-image{
+transform:scale(1.08);
+}
+/* ================= HERO ================= */
+
+.hero-section{
+    background: linear-gradient(135deg,#0d6efd,#6610f2);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-section::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-150px;
+    right:-120px;
+}
+
+.hero-section::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    bottom:-130px;
+    left:-100px;
+}
+
+.hero-section>*{
+    position:relative;
+    z-index:2;
+}
+
+.hero-icon{
+    font-size:8rem;
+    animation:floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.hero-section .badge{
+    font-size:.95rem;
+}
+
+.hero-section .btn{
+    transition:.3s;
+}
+
+.hero-section .btn:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.hero-section{
+text-align:center;
+padding:20px;
+}
+
+.hero-icon{
+font-size:5rem;
+}
+
+}
+/* ===========================
+Navbar
+=========================== */
+
+.navbar .nav-link{
+    color:#fff !important;
+    transition:.3s;
+    position:relative;
+}
+
+.navbar .nav-link:hover{
+    color:#ffc107 !important;
+}
+
+.navbar .nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#ffc107;
+    transition:.35s;
+}
+
+.navbar .nav-link:hover::after{
+    width:100%;
+}
+
+.navbar-brand{
+    letter-spacing:.5px;
+}
+
+.navbar .btn{
+    transition:.3s;
+}
+
+.navbar .btn:hover{
+    transform:translateY(-2px);
+}
+.compare-image {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.compare-image img {
+    object-fit: contain;
+}
+
+.compare-image .react-compare-image {
+    border-radius: 20px;
+}
+.tool-card{
+transition:.35s;
+cursor:pointer;
+}
+
+.tool-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.18)!important;
+}
+
+.tool-card .btn{
+transition:.3s;
+}
+
+.tool-card:hover .btn{
+transform:scale(1.04);
+}
+.featured-card{
+transition:.35s;
+cursor:pointer;
+overflow:hidden;
+}
+
+.featured-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 45px rgba(0,0,0,.18)!important;
+}
+
+.featured-card .btn{
+transition:.3s;
+}
+
+.featured-card:hover .btn{
+transform:scale(1.05);
+}
