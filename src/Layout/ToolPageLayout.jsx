@@ -5,7 +5,7 @@ import HowItWorks from "../Components/HowItWorks";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import FAQ from "../Components/FAQ";
 import FeaturedTools from "../Components/FeaturedTools";
-
+import RelatedTools from "../Components/RelatedTools";
 function ToolPageLayout({
   title,
   description,
@@ -54,8 +54,9 @@ function ToolPageLayout({
 
         </section>
 
-        <HowItWorks />
+        <RelatedTools />
 
+        <HowItWorks />
         <WhyChooseUs />
 
         <FeaturedTools />

@@ -187,6 +187,165 @@ export const blogPosts = [
       },
     ],
   },
+  {
+    slug: "how-to-resize-images-for-instagram-facebook-linkedin",
+    title: "Ideal Image Sizes for Instagram, Facebook & LinkedIn (2026 Guide)",
+    description:
+      "The exact image dimensions to use for Instagram, Facebook and LinkedIn in 2026, plus how to resize your photos correctly for each platform.",
+    keywords:
+      "instagram image size, facebook image size, linkedin image size, social media image dimensions 2026",
+    publishDate: "2026-07-13",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Resize Image",
+      url: "/resize-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Post the wrong size image to social media and you'll often see it awkwardly cropped, stretched, or compressed into mush by the platform itself. Here are the dimensions that actually work well on the three biggest platforms right now.",
+      },
+      {
+        type: "h2",
+        text: "Instagram",
+      },
+      {
+        type: "list",
+        items: [
+          "Square post: 1080 x 1080 px",
+          "Portrait post: 1080 x 1350 px (this gets more screen space in the feed)",
+          "Landscape post: 1080 x 566 px",
+          "Story / Reel: 1080 x 1920 px",
+          "Profile picture: 320 x 320 px",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Facebook",
+      },
+      {
+        type: "list",
+        items: [
+          "Shared image post: 1200 x 630 px",
+          "Cover photo: 820 x 312 px (desktop) — Facebook crops differently on mobile, so keep key content centered",
+          "Profile picture: 170 x 170 px",
+          "Event image: 1920 x 1005 px",
+        ],
+      },
+      {
+        type: "h2",
+        text: "LinkedIn",
+      },
+      {
+        type: "list",
+        items: [
+          "Shared image post: 1200 x 627 px",
+          "Cover banner: 1584 x 396 px",
+          "Profile picture: 400 x 400 px",
+          "Company logo: 300 x 300 px",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why Getting This Right Matters",
+      },
+      {
+        type: "p",
+        text: "When you upload an image at the wrong dimensions, most platforms will auto-crop or auto-compress it — often cutting off important parts of the image or degrading quality in ways you didn't intend. Resizing to the platform's actual dimensions before uploading gives you full control over composition and keeps quality sharp.",
+      },
+      {
+        type: "h2",
+        text: "A Simple Rule of Thumb",
+      },
+      {
+        type: "p",
+        text: "When in doubt, square (1:1) and portrait (4:5) formats tend to perform well across most platforms and take up more visual space in feeds compared to landscape images. If you're posting the same image across multiple platforms, resizing individually for each one — rather than using one size everywhere — will always look sharper.",
+      },
+      {
+        type: "p",
+        text: "You can resize any photo to these exact dimensions for free, directly in your browser, with our Resize Image tool — just enter the pixel size you need and download.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-crop-photos-perfectly-social-media-print",
+    title: "How to Crop Photos Perfectly: A Guide for Social Media and Print",
+    description:
+      "Simple composition rules and practical tips for cropping photos that look intentional and professional, whether for social media or print.",
+    keywords:
+      "how to crop photos, photo cropping guide, crop image composition tips, crop photo for print",
+    publishDate: "2026-07-14",
+    readTime: "6 min read",
+    relatedTool: {
+      name: "Crop Image",
+      url: "/crop-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Cropping is one of the simplest edits you can make to a photo, but it's also one of the easiest to get wrong. A bad crop can cut off exactly the wrong thing or leave an image feeling awkward and unbalanced. Here's how to crop with intention.",
+      },
+      {
+        type: "h2",
+        text: "Start With the Rule of Thirds",
+      },
+      {
+        type: "p",
+        text: "Imagine your image divided into a 3x3 grid. Placing the main subject along one of those grid lines — rather than dead center — almost always creates a more visually interesting composition. Most cropping tools, including ours, show this grid overlay while you crop to make this easy.",
+      },
+      {
+        type: "h2",
+        text: "Know Your Aspect Ratio Before You Crop",
+      },
+      {
+        type: "list",
+        items: [
+          "1:1 (square) — Instagram posts, profile pictures",
+          "4:5 (portrait) — Instagram feed posts, takes up more vertical space",
+          "16:9 (widescreen) — YouTube thumbnails, presentation slides",
+          "9:16 (vertical) — Instagram Stories, Reels, TikTok",
+          "4:3 or 3:2 — standard print sizes and traditional photography",
+        ],
+      },
+      {
+        type: "p",
+        text: "Cropping to the correct aspect ratio for your destination first, then fine-tuning composition, saves you from your subject being awkwardly cut off after the platform auto-crops it for you.",
+      },
+      {
+        type: "h2",
+        text: "Leave Breathing Room",
+      },
+      {
+        type: "p",
+        text: "A common beginner mistake is cropping too tightly around a subject. Leaving a small margin of space around the main subject — especially on the side they're facing or moving toward — makes a photo feel more natural and less claustrophobic.",
+      },
+      {
+        type: "h2",
+        text: "Cropping for Print vs. Screen",
+      },
+      {
+        type: "p",
+        text: "If you're printing a photo, remember standard print sizes (like 4x6 or 8x10) have fixed aspect ratios that may not match your original image. Crop to the exact print ratio beforehand so you control what gets trimmed, rather than leaving it to the print shop's software to decide for you.",
+      },
+      {
+        type: "h2",
+        text: "Quick Checklist Before You Finalize a Crop",
+      },
+      {
+        type: "list",
+        items: [
+          "Is the subject aligned with the rule-of-thirds grid, not dead-center?",
+          "Does the aspect ratio match where this image will actually be used?",
+          "Is there enough breathing room around the subject?",
+          "Did you check the crop doesn't cut off anything important at the edges?",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can crop any image to a custom or preset aspect ratio for free, right in your browser, with our Crop Image tool — no signup, and your photos never leave your device.",
+      },
+    ],
+  },
 ];
 
 export function getPostBySlug(slug) {

@@ -97,4 +97,16 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-resize-images-for-instagram-facebook-linkedin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-crop-photos-perfectly-social-media-print</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
