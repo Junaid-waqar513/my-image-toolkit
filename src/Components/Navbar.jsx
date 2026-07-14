@@ -146,6 +146,17 @@ function Navbar() {
             <li className="nav-item">
 
               <NavLink
+                to="/blog"
+                className="nav-link fw-semibold px-lg-3"
+              >
+                Blog
+              </NavLink>
+
+            </li>
+
+            <li className="nav-item">
+
+              <NavLink
                 to="/contact"
                 className="nav-link fw-semibold px-lg-3"
               >

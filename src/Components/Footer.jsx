@@ -166,6 +166,15 @@ function Footer() {
                 </Link>
               </li>
 
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-decoration-none text-light"
+                >
+                  Blog
+                </Link>
+              </li>
+
             </ul>
 
           </div>

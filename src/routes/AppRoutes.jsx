@@ -18,6 +18,9 @@ const Contact = lazy(() => import("../Pages/Contact"));
 const PrivacyPolicy = lazy(() => import("../Pages/PrivacyPolicy"));
 const Terms = lazy(() => import("../Pages/Terms"));
 
+const BlogList = lazy(() => import("../Pages/Blog/BlogList"));
+const BlogPost = lazy(() => import("../Pages/Blog/BlogPost"));
+
 const NotFound = lazy(() => import("../Pages/NotFound"));
 
 function AppRoutes() {
@@ -88,6 +91,16 @@ function AppRoutes() {
       <Route
         path="/terms"
         element={<Terms />}
+      />
+
+      <Route
+        path="/blog"
+        element={<BlogList />}
+      />
+
+      <Route
+        path="/blog/:slug"
+        element={<BlogPost />}
       />
 
       <Route

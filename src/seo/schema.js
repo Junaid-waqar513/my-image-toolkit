@@ -115,6 +115,32 @@ export function breadcrumbSchema(pageName, pageUrl) {
   };
 }
 
+// BlogPosting schema — for individual blog articles, helps Google
+// understand publish dates and can enable article rich results.
+export function blogPostSchema({ title, description, url, datePublished, image }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url,
+    datePublished,
+    image: image || `${SITE_URL}/og-image.png`,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og-image.png`,
+      },
+    },
+  };
+}
+
 // Combines multiple schema objects into a single JSON-LD graph,
 // which is what the SEO component expects as a single `schema` prop.
 export function combineSchemas(...schemas) {
