@@ -1,7 +1,3 @@
-// Central data source for all blog posts. Each post's `content` is an
-// array of blocks so BlogPost.jsx can render consistent, semantic HTML
-// (h2s, paragraphs, lists) without needing a markdown parser dependency.
-
 export const blogPosts = [
   {
     slug: "jpg-vs-png-vs-webp-best-image-format-2026",
@@ -343,6 +339,75 @@ export const blogPosts = [
       {
         type: "p",
         text: "You can crop any image to a custom or preset aspect ratio for free, right in your browser, with our Crop Image tool — no signup, and your photos never leave your device.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-reduce-image-size-for-email-attachments",
+    title: "How to Reduce Image File Size for Email Attachments (Without Losing Quality)",
+    description:
+      "Hitting an email attachment size limit? Here's how to shrink your photos quickly without noticeable quality loss, plus what size actually works everywhere.",
+    keywords:
+      "reduce image size for email, compress photo for email attachment, email attachment too large, shrink image file size",
+    publishDate: "2026-07-20",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Compress Image",
+      url: "/compress-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "You've attached a photo to an email and gotten the dreaded 'message too large to send' error, or worse, the recipient never got it at all with no explanation why. Most email providers cap total attachment size, and a handful of modern smartphone photos can blow past that limit easily. Here's how to fix it in under a minute.",
+      },
+      {
+        type: "h2",
+        text: "Why This Happens",
+      },
+      {
+        type: "p",
+        text: "Modern phone cameras capture huge files — a single photo can easily be 4-8MB. Most email providers cap total attachment size around 25MB (Gmail, Outlook), meaning even 4-5 photos from your phone can exceed the limit. Some workplace email systems set the limit much lower, sometimes as low as 10MB total.",
+      },
+      {
+        type: "h2",
+        text: "The Fix: Compress Before You Attach",
+      },
+      {
+        type: "p",
+        text: "Compressing a photo to 70-80% quality typically shrinks the file by 60-80% with no visible difference on screen — more than enough to solve almost any attachment limit issue, even with several photos in one email.",
+      },
+      {
+        type: "h2",
+        text: "Step-by-Step",
+      },
+      {
+        type: "list",
+        items: [
+          "Open the Compress Image tool in your browser",
+          "Drag in the photo(s) you want to send",
+          "Use the default quality setting (usually already optimized for this exact situation)",
+          "Download the compressed version and attach that instead of the original",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What If You're Sending Many Photos?",
+      },
+      {
+        type: "p",
+        text: "If you're attaching more than a handful of images, compressing each individually can get tedious. In that case, consider two alternatives: batch-compress all your photos at once instead of one at a time, or use a cloud storage link (Google Drive, Dropbox) rather than attachments if the total size is still too large after compression.",
+      },
+      {
+        type: "h2",
+        text: "A Quick Note on Screenshots",
+      },
+      {
+        type: "p",
+        text: "Screenshots are usually PNGs, which are far larger than photos for the same visual complexity. If you're emailing a screenshot rather than a photo, converting it to JPG first (unless it needs transparency) before compressing will shrink it even further.",
+      },
+      {
+        type: "p",
+        text: "You can compress single images or a whole batch at once, entirely for free and right in your browser, with our Compress Image and Batch Processing tools — no uploads to a server, no signup, no waiting.",
       },
     ],
   },
