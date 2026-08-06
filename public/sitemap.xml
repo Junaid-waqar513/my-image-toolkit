@@ -108,5 +108,41 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+<url>
+    <loc>https://project4-ashen-one.vercel.app/blog/best-free-image-compressor-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-add-watermark-to-photos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-convert-png-to-jpg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/best-image-size-for-websites</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/image-optimization-for-seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-batch-compress-images</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>

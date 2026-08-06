@@ -405,9 +405,449 @@ export const blogPosts = [
         type: "p",
         text: "Screenshots are usually PNGs, which are far larger than photos for the same visual complexity. If you're emailing a screenshot rather than a photo, converting it to JPG first (unless it needs transparency) before compressing will shrink it even further.",
       },
-      {
+    {
         type: "p",
         text: "You can compress single images or a whole batch at once, entirely for free and right in your browser, with our Compress Image and Batch Processing tools — no uploads to a server, no signup, no waiting.",
+      },
+    ],
+  },
+  {
+    slug: "best-free-image-compressor-2026",
+    title: "Best Free Image Compressor in 2026: A Practical Comparison",
+    description:
+      "An honest comparison of popular free image compression tools in 2026 — what each one does well, and what to consider before choosing one.",
+    keywords:
+      "best free image compressor, free image compression tool, online image compressor comparison",
+    publishDate: "2026-07-22",
+    readTime: "6 min read",
+    relatedTool: {
+      name: "Compress Image",
+      url: "/compress-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "There are dozens of free image compression tools online, and most of them do a perfectly fine job on the basics. The real differences come down to privacy, speed, file format support, and whether you're compressing one image or a hundred. Here's an honest look at what to weigh when choosing one.",
+      },
+      {
+        type: "h2",
+        text: "What Actually Matters When Choosing a Compressor",
+      },
+      {
+        type: "list",
+        items: [
+          "Privacy: does the tool upload your images to a server, or process them locally in your browser?",
+          "Format support: does it handle JPG, PNG, and WEBP, or just one format?",
+          "Batch support: can you compress multiple images at once, or only one at a time?",
+          "Quality control: can you choose a compression level, or does it apply one fixed setting?",
+          "Speed and limits: is there a file size cap, a daily limit, or a wait time?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Server-Based vs. Browser-Based Compression",
+      },
+      {
+        type: "p",
+        text: "Most well-known compression tools work by uploading your image to their server, compressing it there, then sending it back. This is fast and reliable, but it does mean your image briefly leaves your device and sits on someone else's server.",
+      },
+      {
+        type: "p",
+        text: "Browser-based tools, by contrast, do the compression directly on your device using your browser's own processing power. Your image never leaves your computer. The tradeoff historically was speed, but modern browsers have made this gap mostly disappear for typical photo sizes.",
+      },
+      {
+        type: "h2",
+        text: "Single Image vs. Batch Workflows",
+      },
+      {
+        type: "p",
+        text: "If you only need to compress one image occasionally, almost any free tool will do the job well. If you regularly need to compress dozens of images at once — for a product catalog, a photo gallery, or a blog's worth of images — batch support becomes the deciding factor, since compressing one at a time quickly becomes tedious.",
+      },
+      {
+        type: "h2",
+        text: "A Simple Way to Decide",
+      },
+      {
+        type: "list",
+        items: [
+          "Compressing sensitive or private photos → prioritize a browser-based tool that never uploads your files",
+          "Compressing many images at once → prioritize batch support",
+          "Need specific format conversion alongside compression → look for a tool that combines both",
+          "Just need a quick one-off compression → almost any reputable free tool will work fine",
+        ],
+      },
+      {
+        type: "p",
+        text: "Our Compress Image tool processes everything directly in your browser, supports JPG, PNG and WEBP, and includes batch processing for compressing multiple images at once — free, with no signup or upload limits.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-add-watermark-to-photos",
+    title: "How to Add a Watermark to Your Photos (Free, No Software Needed)",
+    description:
+      "A simple guide to watermarking your photos to protect your work online, without installing any software.",
+    keywords:
+      "how to add watermark to photo, watermark image free, protect photos online, add text watermark",
+    publishDate: "2026-07-23",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Watermark Image",
+      url: "/watermark-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "If you share photos online — product shots, portfolio work, event photography — a watermark is a simple way to discourage unauthorized use and keep your name attached to your work. Here's how to do it well.",
+      },
+      {
+        type: "h2",
+        text: "Why Watermark at All?",
+      },
+      {
+        type: "p",
+        text: "A watermark doesn't make an image impossible to steal, but it does two useful things: it makes casual reuse less appealing, and it keeps your name or brand visibly attached wherever the image gets shared or reposted.",
+      },
+      {
+        type: "h2",
+        text: "Where to Place a Watermark",
+      },
+      {
+        type: "list",
+        items: [
+          "Corner placement: subtle, doesn't interfere with the subject, but easier to crop out",
+          "Center or diagonal placement: harder to remove by cropping, but more visually intrusive",
+          "Repeated pattern across the image: most resistant to cropping, best for high-value work you want strongly protected",
+        ],
+      },
+      {
+        type: "p",
+        text: "For most everyday use — blog images, social posts, portfolio previews — a corner watermark strikes a good balance between visibility and not distracting from the photo itself.",
+      },
+      {
+        type: "h2",
+        text: "Watermark Text and Style Tips",
+      },
+      {
+        type: "list",
+        items: [
+          "Keep it short: your name, brand, or website URL is usually enough",
+          "Use enough opacity to be legible but not overpowering — usually 40-60% opacity works well",
+          "Choose a color that contrasts with your typical image backgrounds, or use a subtle drop shadow so it stays visible on both light and dark photos",
+        ],
+      },
+      {
+        type: "h2",
+        text: "A Quick Note on Protection Limits",
+      },
+      {
+        type: "p",
+        text: "Watermarks are a deterrent, not a lock. Determined people can still crop or edit them out. If an image is extremely high-value, consider additional protections like limiting resolution of publicly shared versions, alongside watermarking.",
+      },
+      {
+        type: "p",
+        text: "You can add a text watermark to any photo for free, directly in your browser, with our Watermark Image tool — no software to install, and your photos are never uploaded anywhere.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-convert-png-to-jpg",
+    title: "How to Convert PNG to JPG (And When You Should)",
+    description:
+      "A quick guide to converting PNG images to JPG format, including when it makes sense and what you might lose in the process.",
+    keywords:
+      "convert png to jpg, png to jpg converter, change png to jpg free",
+    publishDate: "2026-07-24",
+    readTime: "4 min read",
+    relatedTool: {
+      name: "Convert Image",
+      url: "/convert-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "PNG and JPG are both common image formats, but they're built for different purposes. If you're converting a PNG to JPG, here's what actually happens, when it's a good idea, and when it isn't.",
+      },
+      {
+        type: "h2",
+        text: "Why Convert PNG to JPG at All?",
+      },
+      {
+        type: "p",
+        text: "The main reason is file size. PNG uses lossless compression, which keeps every pixel of detail but results in much larger files, especially for photographs. JPG's lossy compression can shrink the same image dramatically, often by 70-90%, with little to no visible quality difference for photo-style content.",
+      },
+      {
+        type: "h2",
+        text: "When Converting Makes Sense",
+      },
+      {
+        type: "list",
+        items: [
+          "The image is a photograph or has complex colors and gradients",
+          "You don't need a transparent background",
+          "You want faster page load times on a website",
+          "You're attaching the image to an email and hitting size limits",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When You Should NOT Convert",
+      },
+      {
+        type: "list",
+        items: [
+          "The image has a transparent background — JPG doesn't support transparency, so it will be filled in with a solid color (usually white)",
+          "It's a logo, icon, or graphic with sharp text — JPG compression can introduce blurring or artifacts around hard edges",
+          "You need to preserve every exact pixel for further editing later",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to Convert",
+      },
+      {
+        type: "list",
+        items: [
+          "Open the Convert Image tool",
+          "Upload your PNG file",
+          "Select JPG as the output format",
+          "Download the converted file",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can convert PNG to JPG (or the reverse) for free, directly in your browser, with our Convert Image tool — no uploads to a server, and results in seconds.",
+      },
+    ],
+  },
+  {
+    slug: "best-image-size-for-websites",
+    title: "Best Image Size for Websites: A Practical Guide",
+    description:
+      "How to choose the right image dimensions and file size for your website, so pages load fast without sacrificing visual quality.",
+    keywords:
+      "best image size for website, ideal website image dimensions, image size for web pages",
+    publishDate: "2026-07-25",
+    readTime: "6 min read",
+    relatedTool: {
+      name: "Resize Image",
+      url: "/resize-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Oversized images are one of the most common reasons websites load slowly. The right image size depends on where it's being displayed, but a few practical guidelines cover most situations.",
+      },
+      {
+        type: "h2",
+        text: "Match the Image to Its Display Size",
+      },
+      {
+        type: "p",
+        text: "The core rule: an image should never be dramatically larger than the space it's displayed in. If a photo is shown at 800 pixels wide on your page, uploading a 4000-pixel-wide original forces visitors to download five times more data than necessary, for zero visual benefit.",
+      },
+      {
+        type: "h2",
+        text: "Common Website Image Dimensions",
+      },
+      {
+        type: "list",
+        items: [
+          "Full-width hero banner: 1920 x 1080 px",
+          "Blog post featured image: 1200 x 630 px",
+          "In-content blog images: 800-1000 px wide",
+          "Product thumbnails: 400-600 px wide",
+          "Author avatars / small icons: 100-200 px wide",
+        ],
+      },
+      {
+        type: "h2",
+        text: "File Size Targets, Not Just Dimensions",
+      },
+      {
+        type: "p",
+        text: "Dimensions are only half the story — file size matters just as much. As a general target, aim to keep individual web images under 200KB where possible, and hero/banner images under 300-400KB even at larger dimensions. Combining correct resizing with compression at 75-85% quality typically gets you there without visible quality loss.",
+      },
+      {
+        type: "h2",
+        text: "Responsive Images: One Size Doesn't Fit All",
+      },
+      {
+        type: "p",
+        text: "Modern websites often serve different image sizes to different devices — a smaller version for mobile, a larger one for desktop. If you're managing this yourself rather than through a platform that automates it, consider preparing at least two sizes for your most important images: one for mobile, one for desktop.",
+      },
+      {
+        type: "h2",
+        text: "Quick Checklist",
+      },
+      {
+        type: "list",
+        items: [
+          "Resize to the actual display dimensions, not your camera's original resolution",
+          "Compress after resizing, not before",
+          "Aim for under 200KB per image where practical",
+          "Use WEBP where possible for the smallest file sizes",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can resize and compress your images to the right dimensions for free, directly in your browser, with our Resize Image and Compress Image tools.",
+      },
+    ],
+  },
+  {
+    slug: "image-optimization-for-seo",
+    title: "Image Optimization for SEO: A Complete Checklist",
+    description:
+      "How properly optimized images can improve your search rankings, from file size and format to alt text and file names.",
+    keywords:
+      "image optimization for seo, seo image best practices, optimize images for search engines",
+    publishDate: "2026-07-26",
+    readTime: "7 min read",
+    relatedTool: {
+      name: "Compress Image",
+      url: "/compress-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Images affect SEO in more ways than most people realize — not just through page speed, but through image search visibility and accessibility signals too. Here's a complete, practical checklist.",
+      },
+      {
+        type: "h2",
+        text: "1. File Size and Page Speed",
+      },
+      {
+        type: "p",
+        text: "Page speed is a confirmed ranking factor, and oversized images are consistently one of the biggest culprits behind slow pages. Compressing and correctly sizing every image you upload is one of the highest-impact, lowest-effort SEO improvements available.",
+      },
+      {
+        type: "h2",
+        text: "2. Choose the Right Format",
+      },
+      {
+        type: "p",
+        text: "WEBP typically produces the smallest file sizes at equivalent quality, directly helping page speed. JPG remains a safe, widely compatible choice for photographs; PNG should generally be reserved for graphics needing transparency or sharp edges.",
+      },
+      {
+        type: "h2",
+        text: "3. Descriptive File Names",
+      },
+      {
+        type: "p",
+        text: "Before uploading, rename image files from generic names like 'IMG_2841.jpg' to something descriptive, like 'red-leather-office-chair.jpg'. Search engines use file names as a signal for understanding image content, which affects image search rankings.",
+      },
+      {
+        type: "h2",
+        text: "4. Write Real Alt Text",
+      },
+      {
+        type: "p",
+        text: "Alt text describes an image for screen readers and search engine crawlers alike. Write a concise, accurate description of what's actually in the image rather than stuffing it with keywords — both for accessibility and because keyword-stuffed alt text can be seen as a manipulative SEO tactic.",
+      },
+      {
+        type: "h2",
+        text: "5. Use Responsive Images",
+      },
+      {
+        type: "p",
+        text: "Serving appropriately sized images for different devices (rather than one large image scaled down by the browser for mobile users) further improves load times, particularly important since mobile page speed is weighted heavily in search rankings.",
+      },
+      {
+        type: "h2",
+        text: "6. Structured Data for Images",
+      },
+      {
+        type: "p",
+        text: "For certain content types, like recipes or products, adding structured data that references your images can make them eligible for rich results in search, increasing visibility beyond standard image search.",
+      },
+      {
+        type: "h2",
+        text: "Quick Checklist",
+      },
+      {
+        type: "list",
+        items: [
+          "Compress every image before uploading",
+          "Resize to actual display dimensions",
+          "Use descriptive file names",
+          "Write genuine, accurate alt text",
+          "Prefer WEBP where practical",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can compress and resize your images for free, directly in your browser, with our Compress Image and Resize Image tools — an easy first step toward a faster, more SEO-friendly website.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-batch-compress-images",
+    title: "How to Batch Compress Multiple Images at Once",
+    description:
+      "A guide to compressing dozens of images at once instead of one at a time, saving time when you have a large batch of photos to optimize.",
+    keywords:
+      "batch compress images, compress multiple images at once, bulk image compressor free",
+    publishDate: "2026-07-27",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Batch Process",
+      url: "/batch-process",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Compressing images one at a time is fine for the occasional photo, but if you're dealing with a product catalog, an event photo gallery, or a website migration with hundreds of images, doing it individually quickly becomes unmanageable. Batch compression solves that.",
+      },
+      {
+        type: "h2",
+        text: "When You Need Batch Compression",
+      },
+      {
+        type: "list",
+        items: [
+          "Uploading a product catalog with dozens or hundreds of photos",
+          "Preparing an entire photo gallery or portfolio for the web",
+          "Migrating a website and needing to optimize all existing images at once",
+          "Sending a large batch of photos that need to fit within email or storage limits",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Batch Compression Works",
+      },
+      {
+        type: "p",
+        text: "Rather than uploading and compressing one image, adjusting settings, downloading, and repeating, a batch tool lets you select many images at once, apply the same quality settings across all of them, and download everything together — often as a single ZIP file.",
+      },
+      {
+        type: "h2",
+        text: "Tips for Batch Compressing Well",
+      },
+      {
+        type: "list",
+        items: [
+          "Group similar images together (e.g., all photographs) and use a consistent quality setting rather than guessing individually",
+          "Do a quick visual spot-check on a few results before assuming the whole batch looks good",
+          "If your images vary widely in original size, consider resizing to consistent dimensions first for more predictable results",
+        ],
+      },
+      {
+        type: "h2",
+        text: "A Practical Workflow",
+      },
+      {
+        type: "list",
+        items: [
+          "Gather all images you want to process into one batch",
+          "Choose a compression quality (75-85% is a safe default for most photos)",
+          "Run the batch and download the ZIP",
+          "Spot-check a handful of results before publishing",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can batch compress, resize, and convert multiple images at once, entirely for free and in your browser, with our Batch Process tool — no uploads to a server, and everything downloads as one convenient ZIP file.",
       },
     ],
   },
