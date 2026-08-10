@@ -1190,6 +1190,114 @@ const getHealthLabel = (score) => {
             </div>
 
             {/* =================================================
+                PART 6A - OVERALL HEALTH DASHBOARD
+            ================================================= */}
+
+            {(() => {
+              const detailedScores = results.map((image) =>
+                calculateHealthBreakdown(image)
+              );
+
+              const overallHealth = Math.round(
+                detailedScores.reduce((sum, item) => sum + item.overall, 0) /
+                  detailedScores.length
+              );
+
+              const performanceAverage = Math.round(
+                detailedScores.reduce((sum, item) => sum + item.performance, 0) /
+                  detailedScores.length
+              );
+
+              const seoAverage = Math.round(
+                detailedScores.reduce((sum, item) => sum + item.seo, 0) /
+                  detailedScores.length
+              );
+
+              const webAverage = Math.round(
+                detailedScores.reduce((sum, item) => sum + item.webFormat, 0) /
+                  detailedScores.length
+              );
+
+              const priorityIssues = detailedScores.reduce(
+                (count, item) =>
+                  count +
+                  [item.fileSize, item.dimensions, item.performance]
+                    .filter((score) => score < 70).length,
+                0
+              );
+
+              return (
+                <div className="card border-0 shadow-sm rounded-4 mt-5">
+                  <div className="card-body p-4 p-md-5">
+                    <div className="row align-items-center g-4">
+                      <div className="col-lg-4 text-center">
+                        <div className={`display-3 fw-bold ${getScoreColor(overallHealth)}`}>
+                          {overallHealth}
+                        </div>
+                        <div className="fw-bold fs-5">/100</div>
+                        <div className={`fw-bold mt-2 ${getScoreColor(overallHealth)}`}>
+                          {getHealthLabel(overallHealth)}
+                        </div>
+                        <p className="text-muted mb-0 mt-2">
+                          Overall image health
+                        </p>
+                      </div>
+
+                      <div className="col-lg-8">
+                        <div className="d-flex justify-content-between mb-2">
+                          <span className="fw-semibold">Overall Health</span>
+                          <strong className={getScoreColor(overallHealth)}>
+                            {overallHealth}/100
+                          </strong>
+                        </div>
+
+                        <div className="progress mb-4" style={{ height: 12 }}>
+                          <div
+                            className={`progress-bar ${getScoreClass(overallHealth)}`}
+                            style={{ width: `${overallHealth}%` }}
+                          />
+                        </div>
+
+                        <div className="row g-3">
+                          {[
+                            { label: "Performance", icon: "⚡", value: performanceAverage },
+                            { label: "SEO", icon: "🔍", value: seoAverage },
+                            { label: "Web Ready", icon: "🌐", value: webAverage },
+                          ].map((item) => (
+                            <div className="col-md-4" key={item.label}>
+                              <div className="border rounded-4 p-3 h-100">
+                                <div className="d-flex justify-content-between gap-2">
+                                  <span>{item.icon} {item.label}</span>
+                                  <strong className={getScoreColor(item.value)}>
+                                    {item.value}
+                                  </strong>
+                                </div>
+                                <div className="progress mt-2" style={{ height: 6 }}>
+                                  <div
+                                    className={`progress-bar ${getScoreClass(item.value)}`}
+                                    style={{ width: `${item.value}%` }}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {priorityIssues > 0 && (
+                      <div className="alert alert-warning border-0 mt-4 mb-0">
+                        ⚠️ <strong>{priorityIssues}</strong> high-priority issue
+                        {priorityIssues === 1 ? "" : "s"} detected. Review the
+                        recommendations on each image before publishing it.
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* =================================================
                 REPORT HEADER
             ================================================= */}
 
