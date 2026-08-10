@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../Pages/Home";
 import PageLoader from "../Components/PageLoader";
-
+import ImageHealthChecker from "../Pages/ImageHealthChecker";
 const CompressImage = lazy(() => import("../Pages/CompressImage"));
 const ResizeImage = lazy(() => import("../Pages/ResizeImage"));
 const ConvertImage = lazy(() => import("../Pages/ConvertImage"));
@@ -87,6 +87,10 @@ function AppRoutes() {
         path="/privacy-policy"
         element={<PrivacyPolicy />}
       />
+      <Route
+  path="/image-health-checker"
+  element={<ImageHealthChecker />}
+/>
 
       <Route
         path="/terms"
