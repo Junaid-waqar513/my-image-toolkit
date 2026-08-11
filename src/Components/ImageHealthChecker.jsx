@@ -8,7 +8,8 @@ function ImageHealthChecker() {
 
   const [results, setResults] = useState([]);
   const [analyzing, setAnalyzing] = useState(false);
-
+  const [copiedSEO, setCopiedSEO] = useState(null);
+const [seoKeywords, setSeoKeywords] = useState({});
   const [optimizingId, setOptimizingId] = useState(null);
   const [optimizingAll, setOptimizingAll] = useState(false);
   const [optimizationProgress, setOptimizationProgress] = useState(0);
@@ -542,7 +543,233 @@ const getHealthLabel = (score) => {
 
     return Math.max(0, Math.min(100, score));
   };
+  // =====================================================
+// PART 6B-1 - SEO ASSISTANT LOGIC
+// =====================================================
 
+// =====================================================
+// PART 6B-3 - SEO ASSISTANT + COPY SUPPORT
+// =====================================================
+const generateSEOAssistant = (image) => {
+  if (!image) {
+    return {
+      filename: "",
+      altText: "",
+      title: "",
+      keyword: "",
+    };
+  }
+
+  const userKeyword =
+    seoKeywords[image.id]?.trim() || "";
+
+  const originalName = image.name
+    .replace(/\.[^/.]+$/, "")
+    .trim();
+
+  let cleanName = originalName
+    .replace(/[_-]+/g, " ")
+    .replace(/\d+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+  const genericNames = [
+    "image",
+    "img",
+    "photo",
+    "picture",
+    "screenshot",
+    "download",
+    "file",
+    "untitled",
+  ];
+
+  const isGeneric = genericNames.some(
+    (name) =>
+      cleanName === name ||
+      cleanName.startsWith(`${name} `)
+  );
+
+  // =====================================================
+  // KEYWORD
+  // =====================================================
+
+  let keyword = userKeyword;
+
+  if (!keyword && cleanName && !isGeneric) {
+    keyword = cleanName;
+  }
+
+  if (!keyword) {
+    keyword = "optimized image";
+  }
+
+  // Clean keyword
+  keyword = keyword
+    .replace(/\s+/g, " ")
+    .trim();
+
+  // =====================================================
+  // FILENAME
+  // =====================================================
+
+  const seoFilename = keyword
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/gi, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+
+  // =====================================================
+  // NATURAL KEYWORD FORMAT
+  // =====================================================
+
+  const formattedKeyword = keyword
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(
+      (word) =>
+        word.charAt(0).toUpperCase() +
+        word.slice(1).toLowerCase()
+    )
+    .join(" ");
+
+  // =====================================================
+  // ALT TEXT
+  // =====================================================
+
+  let altText = formattedKeyword;
+
+  if (
+    altText.toLowerCase() !==
+    "optimized image"
+  ) {
+    altText = `${formattedKeyword} for web use`;
+  } else {
+    altText =
+      "Optimized image for web use";
+  }
+
+  // Keep alt text concise
+  if (altText.length > 125) {
+    altText =
+      formattedKeyword.slice(0, 110).trim();
+  }
+
+  // =====================================================
+  // TITLE
+  // =====================================================
+
+  let title = formattedKeyword;
+
+  if (
+    formattedKeyword.toLowerCase() !==
+    "optimized image"
+  ) {
+    title = `${formattedKeyword} - Optimized Image`;
+  } else {
+    title = "Optimized Image";
+  }
+
+  // Keep title reasonably short
+  if (title.length > 70) {
+    title =
+      formattedKeyword.slice(0, 60).trim();
+  }
+
+  return {
+    keyword,
+    filename:
+      seoFilename || "optimized-image",
+    altText,
+    title,
+  };
+};
+
+// =====================================================
+// PART 6B-3 - SEO KEYWORD HANDLER
+// =====================================================
+
+const handleSEOKeywordChange = (imageId, value) => {
+  setSeoKeywords((current) => ({
+    ...current,
+    [imageId]: value,
+  }));
+};
+
+
+// =====================================================
+// PART 6B-3 - COPY SEO TEXT
+// =====================================================
+
+const copySEOText = async (
+  text,
+  type,
+  imageId
+) => {
+  if (!text) return;
+
+  try {
+    await navigator.clipboard.writeText(text);
+
+    setCopiedSEO(
+      `${imageId}-${type}`
+    );
+
+    setTimeout(() => {
+      setCopiedSEO(null);
+    }, 1500);
+
+  } catch (error) {
+    console.error(
+      "Could not copy SEO text:",
+      error
+    );
+  }
+};
+// =====================================================
+// PART 6B-8 - COPY ALL SEO
+// =====================================================
+
+const copyAllSEO = async (image) => {
+  if (!image) return;
+
+  const seo = generateSEOAssistant(image);
+
+  const seoText = `SEO INFORMATION
+
+Keyword:
+${seo.keyword}
+
+Filename:
+${seo.filename}.${image.format.toLowerCase()}
+
+Alt Text:
+${seo.altText}
+
+Title:
+${seo.title}`;
+
+  try {
+    await navigator.clipboard.writeText(seoText);
+
+    setCopiedSEO(`${image.id}-all`);
+
+    setTimeout(() => {
+      setCopiedSEO((current) =>
+        current === `${image.id}-all`
+          ? ""
+          : current
+      );
+    }, 2000);
+  } catch (error) {
+    console.error(
+      "Failed to copy SEO information:",
+      error
+    );
+  }
+};
   // =====================================================
   // WEB SCORE
   // =====================================================
@@ -1752,6 +1979,132 @@ const getHealthLabel = (score) => {
 
                           </div>
 
+                        </div>
+                        {/* =====================================================
+                            PART 6B - SEO ASSISTANT
+                        ===================================================== */}
+
+                        <div className="card border rounded-4 mt-4">
+                          <div className="card-body p-4">
+
+                            <div className="d-flex align-items-center gap-2 mb-2">
+                              <span style={{ fontSize: 25 }}>🔍</span>
+                              <h5 className="fw-bold mb-0">
+                                Image SEO Assistant
+                              </h5>
+                            </div>
+
+                            <p className="text-muted small mb-3">
+                              Add a keyword or topic to generate an SEO-friendly filename, title and alt text.
+                            </p>
+
+                            <label className="form-label fw-semibold">
+                              Main keyword / image topic
+                            </label>
+
+                            <input
+                              type="text"
+                              className="form-control rounded-3"
+                              placeholder="Example: red running shoes"
+                              value={seoKeywords[image.id] || ""}
+                              onChange={(event) =>
+                                handleSEOKeywordChange(image.id, event.target.value)
+                              }
+                            />
+
+                            <small className="text-muted d-block mt-2">
+                              Optional — adding a keyword gives you a more relevant SEO suggestion.
+                            </small>
+
+                            {(() => {
+                              const seo = generateSEOAssistant(image);
+                              const originalExtension = image.name.includes(".")
+                                ? image.name.split(".").pop().toLowerCase()
+                                : image.format.toLowerCase();
+                              const suggestedFilename = `${seo.filename}.${originalExtension}`;
+
+                              return (
+                                <div className="mt-4">
+                                  <div className="p-3 rounded-3 bg-light">
+                                  <div className="d-flex justify-content-start justify-content-sm-end mb-3">
+
+  <button
+    type="button"
+    className="btn btn-primary rounded-pill px-3"
+    onClick={() => copyAllSEO(image)}
+  >
+    {copiedSEO === `${image.id}-all`
+      ? "✓ Copied All SEO"
+      : "📋 Copy All SEO"}
+  </button>
+
+</div>
+                                    <div className="mb-3">
+                                      <div className="small text-muted mb-1">
+                                        Suggested Filename
+                                      </div>
+                                      <div className="d-flex gap-2 align-items-center">
+                                        <code className="fw-semibold text-break flex-grow-1 bg-white border rounded p-2">
+                                          {suggestedFilename}
+                                        </code>
+                                        <button
+                                          type="button"
+                                          className="btn btn-sm btn-outline-primary rounded-pill"
+                                          onClick={() =>
+                                            copySEOText(suggestedFilename, "filename", image.id)
+                                          }
+                                        >
+                                          {copiedSEO === `${image.id}-filename` ? "✓ Copied" : "Copy"}
+                                        </button>
+                                      </div>
+                                    </div>
+
+                                    <div className="mb-3">
+                                      <div className="small text-muted mb-1">
+                                        Suggested Alt Text
+                                      </div>
+                                      <div className="d-flex gap-2 align-items-start">
+                                        <div className="fw-semibold flex-grow-1 p-2 bg-white border rounded">
+                                          {seo.altText}
+                                        </div>
+                                        <button
+                                          type="button"
+                                          className="btn btn-sm btn-outline-primary rounded-pill"
+                                          onClick={() =>
+                                            copySEOText(seo.altText, "alt", image.id)
+                                          }
+                                        >
+                                          {copiedSEO === `${image.id}-alt` ? "✓ Copied" : "Copy"}
+                                        </button>
+                                      </div>
+                                    </div>
+
+                                    <div>
+                                      <div className="small text-muted mb-1">
+                                        Suggested Title
+                                      </div>
+                                      <div className="d-flex gap-2 align-items-center">
+                                        <div className="fw-semibold flex-grow-1 p-2 bg-white border rounded">
+                                          {seo.title}
+                                        </div>
+                                        <button
+                                          type="button"
+                                          className="btn btn-sm btn-outline-primary rounded-pill"
+                                          onClick={() =>
+                                            copySEOText(seo.title, "title", image.id)
+                                          }
+                                        >
+                                          {copiedSEO === `${image.id}-title` ? "✓ Copied" : "Copy"}
+                                        </button>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              );
+                            })()}
+
+                          </div>
                         </div>
 
                         {/* =================================================

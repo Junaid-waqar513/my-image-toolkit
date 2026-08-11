@@ -851,6 +851,293 @@ export const blogPosts = [
       },
     ],
   },
+
+    {
+    slug: "image-health-checker-guide",
+
+    title:
+      "Image Health Checker: How to Check Image Size, SEO & Performance",
+
+    description:
+      "Learn how to check image size, dimensions, format, SEO and web performance before publishing images online. Use our free Image Health Checker to find problems and optimize images.",
+
+    keywords:
+      "image health checker,image SEO checker,image performance checker,image optimization checker,check image size,image optimization,image SEO",
+
+    publishDate: "2026-08-11",
+
+    readTime: "7 min read",
+
+    relatedTool: {
+      name: "Image Health Checker",
+      url: "/image-health-checker",
+    },
+
+    content: [
+      {
+        type: "p",
+        text:
+          "An image can look perfectly fine on your screen and still cause problems for a website. A large file size can slow down page loading, oversized dimensions can waste bandwidth, an unsuitable format can increase file size, and a generic filename can make the image less useful for SEO. An Image Health Checker helps you identify these problems before you publish an image.",
+      },
+
+      {
+        type: "h2",
+        text: "What Is an Image Health Checker?",
+      },
+
+      {
+        type: "p",
+        text:
+          "An image health checker analyzes the important characteristics of an image and gives you a practical overview of what may need improvement. Instead of checking file size, dimensions, format and SEO information separately, you can review these factors together and decide what to fix.",
+      },
+
+      {
+        type: "h2",
+        text: "Why Image Health Matters for Websites",
+      },
+
+      {
+        type: "p",
+        text:
+          "Images are often some of the largest files loaded by a webpage. A photo taken with a modern phone or camera may be several megabytes even though it is displayed at a much smaller size on a website. Publishing images without optimization can therefore increase page weight and make visitors wait longer for content to appear.",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Large image files can increase page loading time.",
+          "Oversized dimensions can waste bandwidth.",
+          "The wrong format can result in unnecessarily large files.",
+          "Poor filenames can make images less descriptive.",
+          "Unoptimized images can create a worse experience for mobile visitors.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "1. Check the Image File Size",
+      },
+
+      {
+        type: "p",
+        text:
+          "File size is one of the first things you should check. A 3MB or 5MB image may be unnecessary for a webpage that displays the image at only a few hundred pixels wide. Reducing the file size can make the image much easier for visitors to download, especially on mobile connections.",
+      },
+
+      {
+        type: "p",
+        text:
+          "There is no single file-size limit that works for every image, because the ideal size depends on the image dimensions, quality and purpose. However, for normal website content, keeping images reasonably lightweight is a useful goal.",
+      },
+
+      {
+        type: "h2",
+        text: "2. Check Image Dimensions",
+      },
+
+      {
+        type: "p",
+        text:
+          "Image dimensions are just as important as file size. Uploading a 4000×3000 image when your website only displays it at 800 pixels wide means visitors may download far more image data than they actually need.",
+      },
+
+      {
+        type: "p",
+        text:
+          "A good workflow is to resize an image to an appropriate display size and then compress it. This can often produce a much smaller result than compression alone.",
+      },
+
+      {
+        type: "p",
+        text:
+          "If your image is too large, you can use our Resize Image tool to prepare it for the dimensions required by your website.",
+      },
+
+      {
+        type: "h2",
+        text: "3. Choose the Right Image Format",
+      },
+
+      {
+        type: "p",
+        text:
+          "The format you choose affects both quality and file size. JPG is commonly useful for photographs, PNG is useful when transparency or sharp graphic detail is important, and WebP is a modern format that can provide smaller files while maintaining good visual quality.",
+      },
+
+      {
+        type: "list",
+        items: [
+          "JPG — useful for photographs and complex images.",
+          "PNG — useful for transparency, logos and graphics with sharp edges.",
+          "WebP — useful for many modern website images where reducing file size matters.",
+        ],
+      },
+
+      {
+        type: "p",
+        text:
+          "If your image is using an unnecessarily large format, you can convert it with our Convert Image tool.",
+      },
+
+      {
+        type: "h2",
+        text: "4. Check Image SEO",
+      },
+
+      {
+        type: "p",
+        text:
+          "Image SEO is not only about reducing file size. Search engines and users also benefit when images have descriptive filenames and accurate alternative text.",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Use descriptive filenames instead of names such as IMG_4821.jpg.",
+          "Write useful alt text that accurately describes the image.",
+          "Avoid stuffing keywords into filenames or alt text.",
+          "Use an appropriate image format and reasonable dimensions.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "5. Use Descriptive Image Filenames",
+      },
+
+      {
+        type: "p",
+        text:
+          "A filename such as red-running-shoes.jpg gives much more context than IMG_2841.jpg. A descriptive filename can help you organize your own media library and provides useful context about the image.",
+      },
+
+      {
+        type: "p",
+        text:
+          "Our Image Health Checker can identify generic or unhelpful filenames and provide an SEO recommendation.",
+      },
+
+      {
+        type: "h2",
+        text: "6. Check Web Performance",
+      },
+
+      {
+        type: "p",
+        text:
+          "An image may be visually excellent but still be a poor choice for a webpage if it is unnecessarily large. Web performance is especially important for mobile visitors, where large downloads can take longer on slower connections.",
+      },
+
+      {
+        type: "p",
+        text:
+          "A useful image optimization workflow is to check the original image, identify the main problems, resize it when necessary, compress it and choose a suitable modern format.",
+      },
+
+      {
+        type: "h2",
+        text: "How to Check an Image Before Publishing",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Upload the image to the Image Health Checker.",
+          "Review the health score and recommendations.",
+          "Check the file size and dimensions.",
+          "Review the image format.",
+          "Check the filename and SEO recommendations.",
+          "Fix the biggest problems first.",
+          "Download the optimized version and compare the result.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "What Should You Fix First?",
+      },
+
+      {
+        type: "p",
+        text:
+          "If an image has several problems, start with the issues that have the biggest effect on the visitor experience. A very large file and unnecessarily large dimensions are usually more important than small naming improvements.",
+      },
+
+      {
+        type: "list",
+        items: [
+          "First: reduce unnecessarily large dimensions.",
+          "Second: reduce excessive file size.",
+          "Third: consider a more efficient format.",
+          "Fourth: improve the filename and alt text.",
+          "Finally: check the optimized result before publishing.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "Image Health Checker vs. Individual Image Tools",
+      },
+
+      {
+        type: "p",
+        text:
+          "Individual image tools are useful when you already know exactly what you need to do. The Image Health Checker is different because it starts with an analysis. It helps you discover what may be wrong before deciding whether you need compression, resizing or format conversion.",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Need to reduce file size? Use Compress Image.",
+          "Need smaller dimensions? Use Resize Image.",
+          "Need a different format? Use Convert Image.",
+          "Not sure what needs fixing? Start with Image Health Checker.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "A Simple Image Optimization Workflow",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Check the original image.",
+          "Identify the largest problems.",
+          "Resize if the dimensions are unnecessarily large.",
+          "Compress the image.",
+          "Convert to a suitable modern format when appropriate.",
+          "Review the final file size and dimensions.",
+          "Add descriptive SEO information when publishing.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "Final Checklist Before Uploading an Image",
+      },
+
+      {
+        type: "list",
+        items: [
+          "Is the image larger than necessary?",
+          "Are the dimensions appropriate for where it will be displayed?",
+          "Is the format suitable for the image?",
+          "Is the file size reasonable?",
+          "Does the filename describe the image?",
+          "Is the alt text accurate and useful?",
+          "Does the optimized version still look good?",
+        ],
+      },
+
+      {
+        type: "p",
+        text:
+          "Before publishing your next image, run it through our free Image Health Checker. You can identify common size, dimension, format, performance and basic SEO issues and then optimize the image directly in your browser.",
+      },
+    ],
+  },
 ];
 
 export function getPostBySlug(slug) {

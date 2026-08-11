@@ -2,48 +2,57 @@ import { Link } from "react-router-dom";
 
 function FeaturedTools() {
   const featured = [
-    {
-      icon: "🗜️",
-      title: "Compress Image",
-      path: "/compress-image",
-      users: "250K+ Users",
-      rating: "★★★★★",
-      description:
-        "Reduce image size while maintaining excellent quality.",
-      color: "primary",
-    },
-    {
-      icon: "📏",
-      title: "Resize Image",
-      path: "/resize-image",
-      users: "180K+ Users",
-      rating: "★★★★★",
-      description:
-        "Resize images for social media, websites and printing.",
-      color: "success",
-    },
-    {
-      icon: "🔄",
-      title: "Convert Image",
-      path: "/convert-image",
-      users: "150K+ Users",
-      rating: "★★★★★",
-      description:
-        "Convert JPG, PNG, WEBP, BMP and GIF instantly.",
-      color: "warning",
-    },
-    {
-      icon: "✂️",
-      title: "Crop Image",
-      path: "/crop-image",
-      users: "120K+ Users",
-      rating: "★★★★★",
-      description:
-        "Crop photos accurately with a powerful editor.",
-      color: "danger",
-    },
-  ];
-
+  {
+    icon: "🗜️",
+    title: "Compress Image",
+    path: "/compress-image",
+    users: "250K+ Users",
+    rating: "★★★★★",
+    description:
+      "Reduce image size while maintaining excellent quality.",
+    color: "primary",
+  },
+  {
+    icon: "📏",
+    title: "Resize Image",
+    path: "/resize-image",
+    users: "180K+ Users",
+    rating: "★★★★★",
+    description:
+      "Resize images for social media, websites and printing.",
+    color: "success",
+  },
+  {
+    icon: "🔄",
+    title: "Convert Image",
+    path: "/convert-image",
+    users: "150K+ Users",
+    rating: "★★★★★",
+    description:
+      "Convert JPG, PNG, WEBP, BMP and GIF instantly.",
+    color: "warning",
+  },
+  {
+    icon: "✂️",
+    title: "Crop Image",
+    path: "/crop-image",
+    users: "120K+ Users",
+    rating: "★★★★★",
+    description:
+      "Crop photos accurately with a powerful editor.",
+    color: "danger",
+  },
+  {
+    icon: "🩺",
+    title: "Image Health Checker",
+    path: "/image-health-checker",
+    users: "NEW",
+    rating: "★★★★★",
+    description:
+      "Check image size, dimensions, format, performance and SEO, then optimize it instantly.",
+    color: "info",
+  },
+];
   return (
     <section className="container my-5">
 

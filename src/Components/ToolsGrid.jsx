@@ -1,51 +1,117 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function ToolsGrid() {
+  // =====================================================
+  // ALL TOOLS
+  // =====================================================
+
   const tools = [
-  {
-    icon: "🗜️",
-    title: "Compress Image",
-    description: "Reduce image size without losing quality.",
-    path: "/compress-image",
-  },
-  {
-    icon: "📏",
-    title: "Resize Image",
-    description: "Resize images instantly.",
-    path: "/resize-image",
-  },
-  {
-    icon: "🔄",
-    title: "Convert Image",
-    description: "Convert JPG, PNG and WEBP.",
-    path: "/convert-image",
-  },
-  {
-    icon: "✂️",
-    title: "Crop Image",
-    description: "Crop images online.",
-    path: "/crop-image",
-  },
-  {
-    icon: "↩️",
-    title: "Rotate Image",
-    description: "Rotate images quickly.",
-    path: "/rotate-image",
-  },
-  {
-    icon: "💧",
-    title: "Watermark Image",
-    description: "Add watermarks to photos.",
-    path: "/watermark-image",
-  },
-];
+    {
+      icon: "🗜️",
+      title: "Compress Image",
+      description:
+        "Reduce image size without losing quality.",
+      path: "/compress-image",
+      color: "primary",
+      badge: "Popular",
+      category: "Compress",
+    },
+
+    {
+      icon: "📏",
+      title: "Resize Image",
+      description:
+        "Resize images instantly for websites and social media.",
+      path: "/resize-image",
+      color: "success",
+      badge: "Popular",
+      category: "Edit",
+    },
+
+    {
+      icon: "🔄",
+      title: "Convert Image",
+      description:
+        "Convert JPG, PNG, WEBP and other image formats.",
+      path: "/convert-image",
+      color: "warning",
+      badge: "Popular",
+      category: "Convert",
+    },
+
+    {
+      icon: "✂️",
+      title: "Crop Image",
+      description:
+        "Crop images online quickly and accurately.",
+      path: "/crop-image",
+      color: "danger",
+      badge: "Free",
+      category: "Edit",
+    },
+
+    {
+      icon: "↩️",
+      title: "Rotate Image",
+      description:
+        "Rotate images quickly to the correct orientation.",
+      path: "/rotate-image",
+      color: "secondary",
+      badge: "Free",
+      category: "Edit",
+    },
+
+    {
+      icon: "💧",
+      title: "Watermark Image",
+      description:
+        "Add text or watermarks to your photos.",
+      path: "/watermark-image",
+      color: "dark",
+      badge: "Free",
+      category: "Edit",
+    },
+
+    // =====================================================
+    // IMAGE HEALTH CHECKER
+    // =====================================================
+
+    {
+      icon: "🩺",
+      title: "Image Health Checker",
+      description:
+        "Check image size, dimensions, format, performance and SEO, then optimize it instantly.",
+      path: "/image-health-checker",
+      color: "info",
+      badge: "NEW",
+      category: "Compress",
+    },
+  ];
+
+  // =====================================================
+  // SEARCH / FILTER STATE
+  // =====================================================
+
   const [search, setSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+
+  const [activeCategory, setActiveCategory] =
+    useState("All");
+
+  // =====================================================
+  // FILTER TOOLS
+  // =====================================================
 
   const filteredTools = tools.filter((tool) => {
-    const matchesSearch = tool.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
+    const searchText = search.toLowerCase().trim();
+
+    const matchesSearch =
+      tool.title
+        .toLowerCase()
+        .includes(searchText) ||
+      tool.description
+        .toLowerCase()
+        .includes(searchText);
 
     const matchesCategory =
       activeCategory === "All"
@@ -55,8 +121,16 @@ function ToolsGrid() {
     return matchesSearch && matchesCategory;
   });
 
+  // =====================================================
+  // RENDER
+  // =====================================================
+
   return (
     <section className="container my-5">
+
+      {/* =================================================
+          HEADER
+      ================================================= */}
 
       <div className="text-center mb-5">
 
@@ -65,14 +139,19 @@ function ToolsGrid() {
         </h2>
 
         <p className="lead text-muted">
-          Free online image editing tools for everyone.
+          Free online image editing and optimization
+          tools for everyone.
         </p>
 
       </div>
 
-      {/* Search + Filters */}
+      {/* =================================================
+          SEARCH + FILTERS
+      ================================================= */}
 
       <div className="row mb-5">
+
+        {/* SEARCH */}
 
         <div className="col-lg-6">
 
@@ -88,6 +167,8 @@ function ToolsGrid() {
 
         </div>
 
+        {/* FILTERS */}
+
         <div className="col-lg-6 mt-3 mt-lg-0">
 
           <div className="d-flex flex-wrap gap-2 justify-content-lg-end">
@@ -97,11 +178,11 @@ function ToolsGrid() {
               "Compress",
               "Edit",
               "Convert",
-              "Batch",
             ].map((cat) => (
 
               <button
                 key={cat}
+                type="button"
                 className={`btn ${
                   activeCategory === cat
                     ? "btn-primary"
@@ -122,20 +203,64 @@ function ToolsGrid() {
 
       </div>
 
-      {/* Cards */}
+      {/* =================================================
+          ACTIVE FILTER MESSAGE
+      ================================================= */}
+
+      {(search || activeCategory !== "All") && (
+
+        <div className="d-flex justify-content-between align-items-center mb-4">
+
+          <div className="text-muted small">
+
+            Showing{" "}
+            <strong>
+              {filteredTools.length}
+            </strong>{" "}
+            tool
+            {filteredTools.length !== 1
+              ? "s"
+              : ""}
+
+          </div>
+
+          <button
+            type="button"
+            className="btn btn-sm btn-outline-secondary rounded-pill"
+            onClick={() => {
+              setSearch("");
+              setActiveCategory("All");
+            }}
+          >
+            Clear Filters
+          </button>
+
+        </div>
+
+      )}
+
+      {/* =================================================
+          TOOL CARDS
+      ================================================= */}
 
       <div className="row g-4">
 
-        {filteredTools.map((tool, index) => (
+        {filteredTools.map((tool) => (
 
           <div
-            key={index}
+            key={tool.path}
             className="col-lg-4 col-md-6"
           >
 
-            <div className="card h-100 border-0 shadow-lg rounded-4 tool-card">
+            <div
+              className="card h-100 border-0 shadow-lg rounded-4 tool-card"
+            >
 
               <div className="card-body p-4">
+
+                {/* =================================================
+                    ICON + BADGE
+                ================================================= */}
 
                 <div className="d-flex justify-content-between align-items-center">
 
@@ -150,36 +275,60 @@ function ToolsGrid() {
                     {tool.icon}
                   </div>
 
-                  <span className={`badge bg-${tool.color}`}>
+                  <span
+                    className={`badge bg-${tool.color}`}
+                  >
                     {tool.badge}
                   </span>
 
                 </div>
 
+                {/* =================================================
+                    TITLE
+                ================================================= */}
+
                 <h4 className="fw-bold mt-4">
                   {tool.title}
                 </h4>
+
+                {/* =================================================
+                    DESCRIPTION
+                ================================================= */}
 
                 <p className="text-muted">
                   {tool.description}
                 </p>
 
+                {/* =================================================
+                    FEATURES
+                ================================================= */}
+
                 <div className="mb-4">
 
-                  <div>✅ Free Forever</div>
+                  <div>
+                    ✅ Free Forever
+                  </div>
 
-                  <div>⚡ Lightning Fast</div>
+                  <div>
+                    ⚡ Lightning Fast
+                  </div>
 
-                  <div>🔒 Privacy Friendly</div>
+                  <div>
+                    🔒 Privacy Friendly
+                  </div>
 
                 </div>
 
+                {/* =================================================
+                    OPEN TOOL
+                ================================================= */}
+
                 <Link
-  to={tool.path}
-  className="btn btn-primary rounded-pill"
->
-  Open Tool
-</Link>
+                  to={tool.path}
+                  className="btn btn-primary rounded-pill"
+                >
+                  Open Tool →
+                </Link>
 
               </div>
 
@@ -189,13 +338,19 @@ function ToolsGrid() {
 
         ))}
 
+        {/* =================================================
+            NO RESULTS
+        ================================================= */}
+
         {filteredTools.length === 0 && (
 
           <div className="col-12">
 
             <div className="alert alert-info text-center rounded-4">
 
-              <h5>No tools found</h5>
+              <h5>
+                No tools found
+              </h5>
 
               <p className="mb-0">
                 Try searching with another keyword.

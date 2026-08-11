@@ -44,6 +44,9 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -52,9 +55,12 @@ function Navbar() {
           className="collapse navbar-collapse"
           id="navbarMenu"
         >
+
           {/* Center Menu */}
 
           <ul className="navbar-nav mx-auto">
+
+            {/* Home */}
 
             <li className="nav-item">
 
@@ -67,7 +73,7 @@ function Navbar() {
 
             </li>
 
-            {/* Dropdown */}
+            {/* Tools Dropdown */}
 
             <li className="nav-item dropdown">
 
@@ -76,11 +82,14 @@ function Navbar() {
                 className="nav-link dropdown-toggle fw-semibold"
                 role="button"
                 data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
                 Tools
               </a>
 
               <ul className="dropdown-menu shadow border-0 rounded-4">
+
+                {/* Compress */}
 
                 <li>
 
@@ -93,6 +102,8 @@ function Navbar() {
 
                 </li>
 
+                {/* Resize */}
+
                 <li>
 
                   <NavLink
@@ -103,6 +114,8 @@ function Navbar() {
                   </NavLink>
 
                 </li>
+
+                {/* Convert */}
 
                 <li>
 
@@ -115,7 +128,74 @@ function Navbar() {
 
                 </li>
 
-                <li><hr className="dropdown-divider" /></li>
+                {/* Crop */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item"
+                    to="/crop-image"
+                  >
+                    ✂️ Crop Image
+                  </NavLink>
+
+                </li>
+
+                {/* Rotate */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item"
+                    to="/rotate-image"
+                  >
+                    ↩️ Rotate Image
+                  </NavLink>
+
+                </li>
+
+                {/* Watermark */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item"
+                    to="/watermark-image"
+                  >
+                    💧 Watermark Image
+                  </NavLink>
+
+                </li>
+
+                {/* Divider */}
+
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+
+                {/* Image Health Checker */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item fw-semibold"
+                    to="/image-health-checker"
+                  >
+                    🩺 Image Health Checker
+                    <span className="badge bg-success ms-2">
+                      NEW
+                    </span>
+                  </NavLink>
+
+                </li>
+
+                {/* Divider */}
+
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+
+                {/* All Tools */}
 
                 <li>
 
@@ -132,6 +212,8 @@ function Navbar() {
 
             </li>
 
+            {/* About */}
+
             <li className="nav-item">
 
               <NavLink
@@ -143,6 +225,8 @@ function Navbar() {
 
             </li>
 
+            {/* Blog */}
+
             <li className="nav-item">
 
               <NavLink
@@ -153,6 +237,8 @@ function Navbar() {
               </NavLink>
 
             </li>
+
+            {/* Contact */}
 
             <li className="nav-item">
 
