@@ -151,4 +151,27 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/what-is-exif-data-why-remove-it</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-remove-gps-location-from-photos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/complete-guide-to-imagetoolkit-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/exif-remover</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

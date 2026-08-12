@@ -1130,11 +1130,342 @@ export const blogPosts = [
           "Does the optimized version still look good?",
         ],
       },
-
+{
+        type: "p",
+        text: "You can batch compress, resize, and convert multiple images at once, entirely for free and in your browser, with our Batch Process tool — no uploads to a server, and everything downloads as one convenient ZIP file.",
+      },
+    ],
+  },
+  {
+    slug: "what-is-exif-data-why-remove-it",
+    title: "What Is EXIF Data and Why Should You Remove It?",
+    description:
+      "EXIF data is hidden information embedded in your photos, including GPS location. Here's what it contains and when you should remove it.",
+    keywords:
+      "what is exif data, exif metadata explained, remove exif data, hidden photo information",
+    publishDate: "2026-07-28",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "EXIF Metadata Remover",
+      url: "/exif-remover",
+    },
+    content: [
       {
         type: "p",
-        text:
-          "Before publishing your next image, run it through our free Image Health Checker. You can identify common size, dimension, format, performance and basic SEO issues and then optimize the image directly in your browser.",
+        text: "Every photo you take with a phone or digital camera carries more information than just the image itself. This hidden data, called EXIF metadata, travels invisibly inside the file — and most people have no idea it's there, or what it reveals.",
+      },
+      {
+        type: "h2",
+        text: "What EXIF Data Actually Contains",
+      },
+      {
+        type: "list",
+        items: [
+          "Camera or phone make and model",
+          "Lens information and camera settings (aperture, shutter speed, ISO)",
+          "The exact date and time the photo was taken",
+          "GPS coordinates of where the photo was taken, if location services were on",
+          "Software used to edit the image, if any",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why This Matters for Privacy",
+      },
+      {
+        type: "p",
+        text: "The most sensitive piece of EXIF data is GPS location. If you photograph your home, workplace, or any private location and share that photo online, the embedded coordinates can reveal exactly where it was taken — even if you never mention the location in your caption.",
+      },
+      {
+        type: "p",
+        text: "This has led to real privacy incidents: people have unintentionally revealed their home address, a child's school, or their location while traveling, simply by sharing an unmodified photo.",
+      },
+      {
+        type: "h2",
+        text: "Where EXIF Data Commonly Causes Problems",
+      },
+      {
+        type: "list",
+        items: [
+          "Selling items online (marketplace listings, classifieds) with photos taken at home",
+          "Sharing photos of children, revealing school or home locations",
+          "Posting travel photos in real-time, revealing your current location",
+          "Professional photography where camera/lens details shouldn't be shared publicly",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When You Should Keep EXIF Data",
+      },
+      {
+        type: "p",
+        text: "EXIF data isn't inherently bad — photographers often rely on it to review camera settings later, and some platforms use it for automatic photo organization by date or location. The key is being deliberate: keep it for your own private archive, but consider removing it before publicly sharing an image.",
+      },
+      {
+        type: "h2",
+        text: "How to Check and Remove It",
+      },
+      {
+        type: "p",
+        text: "Most people never check whether their photos contain this data before sharing them. A quick scan can reveal exactly what's embedded — camera details, timestamps, and critically, GPS coordinates — before you post anything.",
+      },
+      {
+        type: "p",
+        text: "You can scan any photo for hidden EXIF data and remove it in one click, entirely in your browser, with our EXIF Metadata Remover — no uploads to a server, so the sensitive data never leaves your device either.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-remove-gps-location-from-photos",
+    title: "How to Remove GPS Location Data from Photos Before Sharing Online",
+    description:
+      "Learn how to check if your photos contain embedded GPS coordinates, and how to strip that location data before sharing them publicly.",
+    keywords:
+      "remove gps location from photo, strip gps data from image, remove location metadata photo, photo geotag remover",
+    publishDate: "2026-07-29",
+    readTime: "4 min read",
+    relatedTool: {
+      name: "EXIF Metadata Remover",
+      url: "/exif-remover",
+    },
+    content: [
+      {
+        type: "p",
+        text: "If your phone's location services were on when you took a photo, there's a good chance the exact GPS coordinates of that moment are embedded invisibly in the file. Here's how to check for it and remove it before you share.",
+      },
+      {
+        type: "h2",
+        text: "How GPS Data Gets Into Your Photos",
+      },
+      {
+        type: "p",
+        text: "Most smartphones automatically tag photos with GPS coordinates when location services are enabled for the camera app. This happens silently in the background — there's no visible indicator on the photo itself that this data exists.",
+      },
+      {
+        type: "h2",
+        text: "Why This Is Riskier Than It Seems",
+      },
+      {
+        type: "p",
+        text: "A photo with embedded GPS data reveals the precise location it was taken — often accurate to within a few meters. Unlike a caption you write yourself, you can't simply avoid mentioning where you are; the coordinates are baked into the file regardless of what you post alongside it.",
+      },
+      {
+        type: "h2",
+        text: "Situations Where This Matters Most",
+      },
+      {
+        type: "list",
+        items: [
+          "Selling items on marketplaces using photos taken inside your home",
+          "Posting photos of children that could reveal a school or home address",
+          "Sharing real-time travel photos while still at that location",
+          "Any photo you don't want traceable back to a specific address",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to Check If a Photo Has GPS Data",
+      },
+      {
+        type: "p",
+        text: "You generally can't tell just by looking at a photo. You need a tool that reads the file's embedded EXIF metadata directly, which will show the GPS coordinates if present, along with other details like camera model and timestamp.",
+      },
+      {
+        type: "h2",
+        text: "How to Remove It",
+      },
+      {
+        type: "list",
+        items: [
+          "Scan the photo to check whether GPS or other metadata is present",
+          "If found, run the metadata removal process, which strips all embedded data including GPS",
+          "Download the cleaned version and use that instead of the original for sharing",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can check any photo for embedded GPS location and remove it in one click, entirely in your browser, with our EXIF Metadata Remover — your images are never uploaded, so the sensitive location data stays fully private throughout the process.",
+      },
+    ],
+  },
+  {
+    slug: "complete-guide-to-imagetoolkit-tools",
+    title: "The Complete Guide to ImageToolkit: Every Tool Explained",
+    description:
+      "A complete walkthrough of every free tool on ImageToolkit — what each one does, how to use it, and who benefits most, from bloggers to developers.",
+    keywords:
+      "image toolkit guide, free image tools online, image editing tools for bloggers, image tools for developers",
+    publishDate: "2026-07-30",
+    readTime: "12 min read",
+    relatedTool: {
+      name: "All Tools",
+      url: "/",
+    },
+    content: [
+      {
+        type: "p",
+        text: "ImageToolkit brings together a full set of image tools in one place, and every one of them runs directly in your browser — nothing is ever uploaded to a server. This guide walks through each tool, what it's actually for, how to use it, and who tends to get the most value from it. Bookmark this page; it gets updated as new tools are added.",
+      },
+      {
+        type: "h2",
+        text: "🗜️ Compress Image",
+      },
+      {
+        type: "p",
+        text: "Compress Image shrinks a photo's file size — often by 60-80% — while keeping it visually indistinguishable from the original. It works by adjusting the compression quality of JPG, PNG and WEBP files.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, choose a quality level (75-85% is a safe default), download the compressed file",
+          "Best for: bloggers and website owners speeding up page load times, anyone emailing photos that exceed attachment limits, online sellers optimizing product photos",
+        ],
+      },
+      {
+        type: "h2",
+        text: "📏 Resize Image",
+      },
+      {
+        type: "p",
+        text: "Resize Image changes an image's pixel dimensions to match exactly where it will be used — a social media post, a website banner, a print size — instead of leaving it at its original camera resolution.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, enter your target width/height or pick a preset (Instagram, Facebook, etc.), download the result",
+          "Best for: social media managers preparing platform-specific images, web developers matching design specs, anyone prepping images for print",
+        ],
+      },
+      {
+        type: "h2",
+        text: "🔄 Convert Image",
+      },
+      {
+        type: "p",
+        text: "Convert Image switches an image between formats — JPG, PNG, WEBP and more — so you can pick the right format for the job (transparency, smaller file size, or broader compatibility).",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, choose your target format, download the converted file",
+          "Best for: developers standardizing image formats across a project, anyone needing a transparent PNG turned into a smaller JPG (or the reverse), photographers converting camera formats for web use",
+        ],
+      },
+      {
+        type: "h2",
+        text: "✂️ Crop Image",
+      },
+      {
+        type: "p",
+        text: "Crop Image lets you cut an image down to a specific area or aspect ratio, helping with composition and making sure the image fits the exact shape a platform or layout requires.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, select a crop area or aspect ratio, download the cropped result",
+          "Best for: content creators framing social posts correctly, designers fitting images into fixed layout slots, anyone removing unwanted parts of a photo",
+        ],
+      },
+      {
+        type: "h2",
+        text: "↩️ Rotate Image",
+      },
+      {
+        type: "p",
+        text: "Rotate Image fixes orientation issues — a sideways or upside-down photo — in a couple of clicks, without needing dedicated photo editing software.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, rotate to the correct orientation, download",
+          "Best for: anyone dealing with photos that import sideways from a phone or scanner",
+        ],
+      },
+      {
+        type: "h2",
+        text: "💧 Watermark Image",
+      },
+      {
+        type: "p",
+        text: "Watermark Image adds a text watermark to your photos, giving you a simple way to keep your name or brand attached to work you share publicly.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, enter your watermark text, adjust placement and opacity, download",
+          "Best for: photographers and designers protecting portfolio work, bloggers branding featured images, anyone sharing original photos publicly",
+        ],
+      },
+      {
+        type: "h2",
+        text: "📦 Batch Process",
+      },
+      {
+        type: "p",
+        text: "Batch Process applies compression, resizing or conversion to many images at once instead of one at a time, downloading everything together as a single ZIP file.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload multiple images, choose your processing settings, run the batch, download the ZIP",
+          "Best for: online sellers optimizing an entire product catalog, anyone migrating a website's worth of images, event photographers processing large galleries",
+        ],
+      },
+      {
+        type: "h2",
+        text: "🩺 Image Health Checker (with built-in SEO Assistant)",
+      },
+      {
+        type: "p",
+        text: "Image Health Checker analyzes an image's file size, dimensions, format and filename, then scores how web-ready and SEO-friendly it is. It also includes a built-in SEO Assistant that suggests an optimized filename, alt text, and title based on a keyword you provide — and can auto-optimize the image to WebP with one click.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, review its health score and recommendations, optionally add a keyword for SEO suggestions, click Fix My Image to auto-optimize",
+          "Best for: SEO specialists auditing site images at scale, bloggers who want ready-to-use alt text and filenames, developers checking whether images are web-ready before deployment",
+        ],
+      },
+      {
+        type: "h2",
+        text: "🕵️ EXIF Metadata Remover",
+      },
+      {
+        type: "p",
+        text: "EXIF Metadata Remover scans a photo for hidden embedded data — camera model, date taken, and critically, GPS location — and strips it out in one click, producing a clean file safe to share publicly.",
+      },
+      {
+        type: "list",
+        items: [
+          "How to use it: upload an image, review what metadata was found, click Remove Metadata, download the clean version",
+          "Best for: anyone selling items online with photos taken at home, parents sharing photos of children, travelers posting in real time, and generally anyone who values privacy before posting a photo publicly",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Which Tool Should You Use? A Quick Reference",
+      },
+      {
+        type: "list",
+        items: [
+          "Bloggers & content writers: Compress + Resize (page speed), Image Health Checker (SEO-ready images), Watermark (protect original photos)",
+          "Web developers: Convert (format standardization), Batch Process (bulk asset prep), Image Health Checker (pre-deployment checks)",
+          "SEO specialists: Image Health Checker's SEO Assistant (filenames, alt text), Compress (Core Web Vitals / page speed)",
+          "Photographers & designers: Crop, Rotate, Watermark, EXIF Remover (protect location privacy before sharing client or personal work)",
+          "General everyday use: Compress (email attachments), Resize (social media), EXIF Remover (privacy before posting)",
+        ],
+      },
+      {
+        type: "h2",
+        text: "A Toolkit That Keeps Growing",
+      },
+      {
+        type: "p",
+        text: "This guide reflects the current set of tools available, and it gets updated as new ones are added. Every tool works the same way: upload, process, download — entirely in your browser, with nothing ever sent to a server.",
+      },
+      {
+        type: "p",
+        text: "You can jump straight into any of these tools from the homepage, or explore the rest of the blog for deeper guides on specific topics like image formats, compression, and SEO.",
       },
     ],
   },
