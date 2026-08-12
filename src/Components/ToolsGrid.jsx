@@ -87,6 +87,17 @@ function ToolsGrid() {
       badge: "NEW",
       category: "Compress",
     },
+
+    {
+      icon: "🕵️",
+      title: "EXIF Metadata Remover",
+      description:
+        "Remove hidden EXIF data and GPS location from your photos.",
+      path: "/exif-remover",
+      color: "dark",
+      badge: "NEW",
+      category: "Edit",
+    },
   ];
 
   // =====================================================

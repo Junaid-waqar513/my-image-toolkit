@@ -189,6 +189,30 @@ function Navbar() {
 
                 </li>
 
+                {/* EXIF Metadata Remover */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item fw-semibold"
+                    to="/exif-remover"
+                  >
+                    🕵️ EXIF Metadata Remover
+                    <span className="badge bg-success ms-2">
+                      NEW
+                    </span>
+                  </NavLink>
+
+                </li>
+
+                {/* Divider */}
+
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+
+                {/* All Tools */}
+
                 {/* Divider */}
 
                 <li>
@@ -265,7 +289,7 @@ function Navbar() {
             </button>
 
             <a
-              href="https://github.com/"
+              href="https://github.com/Junaid-waqar513/my-image-toolkit"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-warning fw-bold rounded-pill px-4"

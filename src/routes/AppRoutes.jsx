@@ -22,7 +22,7 @@ const BlogList = lazy(() => import("../Pages/Blog/BlogList"));
 const BlogPost = lazy(() => import("../Pages/Blog/BlogPost"));
 
 const NotFound = lazy(() => import("../Pages/NotFound"));
-
+const ExifRemoverPage = lazy(() => import("../Pages/ExifRemover"));
 function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -95,6 +95,10 @@ function AppRoutes() {
       <Route
         path="/terms"
         element={<Terms />}
+      />
+       <Route
+        path="/exif-remover"
+        element={<ExifRemoverPage />}
       />
 
       <Route
