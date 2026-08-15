@@ -204,6 +204,18 @@ function Navbar() {
                   </NavLink>
 
                 </li>
+                {/* Image to PDF */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item fw-semibold"
+                    to="/image-to-pdf"
+                  >
+                    📄 Image to PDF
+                  </NavLink>
+
+                </li>
 
                 {/* Divider */}
 

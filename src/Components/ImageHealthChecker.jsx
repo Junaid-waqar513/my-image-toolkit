@@ -2588,11 +2588,17 @@ ${seo.title}`;
                   📏 Resize
                 </a>
 
-                <a
-                  href="/convert-image"
+              <a  href="/convert-image"
                   className="btn btn-outline-primary rounded-pill px-4"
                 >
                   🔄 Convert
+                </a>
+
+                
+                 <a href="/image-to-pdf"
+                  className="btn btn-outline-primary rounded-pill px-4"
+                >
+                  📄 Convert to PDF
                 </a>
 
               </div>

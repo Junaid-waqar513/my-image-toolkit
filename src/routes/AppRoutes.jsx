@@ -23,6 +23,7 @@ const BlogPost = lazy(() => import("../Pages/Blog/BlogPost"));
 
 const NotFound = lazy(() => import("../Pages/NotFound"));
 const ExifRemoverPage = lazy(() => import("../Pages/ExifRemover"));
+const ImageToPDFPage = lazy(() => import("../Pages/ImageToPDF"));
 function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -99,6 +100,10 @@ function AppRoutes() {
        <Route
         path="/exif-remover"
         element={<ExifRemoverPage />}
+      />
+      <Route
+        path="/image-to-pdf"
+        element={<ImageToPDFPage />}
       />
 
       <Route

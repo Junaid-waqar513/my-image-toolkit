@@ -1469,6 +1469,133 @@ export const blogPosts = [
       },
     ],
   },
+  {
+    slug: "how-to-convert-images-to-pdf",
+    title: "How to Convert Images to PDF Online for Free",
+    description:
+      "A complete guide to converting JPG and PNG images to PDF, combining multiple images into one document, and choosing the right settings.",
+    keywords:
+      "how to convert images to pdf, jpg to pdf, png to pdf, combine images into pdf, image to pdf converter",
+    publishDate: "2026-07-31",
+    readTime: "6 min read",
+    relatedTool: {
+      name: "Image to PDF",
+      url: "/image-to-pdf",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Whether you're submitting a scanned document, sending a portfolio, or just need a cleaner way to share several photos as one file, converting images to PDF is one of the most common everyday file tasks. Here's how to do it properly.",
+      },
+      {
+        type: "h2",
+        text: "Why Convert Images to PDF?",
+      },
+      {
+        type: "list",
+        items: [
+          "PDF keeps multiple images together as one file instead of several separate attachments",
+          "Page order is fixed and predictable, unlike a folder of loose images",
+          "PDFs print consistently and look the same across devices and operating systems",
+          "Many forms and application processes specifically require PDF rather than image files",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to Convert JPG to PDF",
+      },
+      {
+        type: "list",
+        items: [
+          "Open the Image to PDF tool",
+          "Drop in your JPG file (or click to browse)",
+          "Choose your page size, orientation and margin settings",
+          "Click Convert to PDF and download the result",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to Convert PNG to PDF",
+      },
+      {
+        type: "p",
+        text: "The process is identical for PNG files. One thing worth knowing: if your PNG has a transparent background, it will typically appear on a white page background in the final PDF, since PDF pages don't support transparency the way PNG images do.",
+      },
+      {
+        type: "h2",
+        text: "Combining Multiple Images Into One PDF",
+      },
+      {
+        type: "p",
+        text: "This is where the real time-saving happens. Instead of converting and sending images one at a time, you can drop in several images at once — each one becomes its own page in a single PDF, in whatever order you arrange them.",
+      },
+      {
+        type: "list",
+        items: [
+          "Upload all the images you want to include",
+          "Use the up and down arrows to put them in the order you want",
+          "Convert once — you'll get one PDF with all images as separate pages",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Choosing A4 vs. Letter",
+      },
+      {
+        type: "p",
+        text: "A4 is the standard page size across most of the world; Letter is standard in the United States and a few other countries. If you're unsure which your recipient expects, A4 is the safer international default, while Letter is the safer choice if you know the document is staying within the US.",
+      },
+      {
+        type: "p",
+        text: "If your priority is preserving the image at its native resolution rather than fitting a standard page size, choosing 'Original Image Size' as the page size keeps each page sized exactly to its image.",
+      },
+      {
+        type: "h2",
+        text: "Preparing Scanned Documents",
+      },
+      {
+        type: "p",
+        text: "If you're converting a phone photo of a scanned document, a couple of steps make a real difference in the final result: crop the image tightly to the document's edges first, and consider straightening/rotating it if it was photographed at an angle. Both of these keep the final PDF looking clean and professional rather than like a casual photo.",
+      },
+      {
+        type: "h2",
+        text: "A Note on Image Quality",
+      },
+      {
+        type: "p",
+        text: "Very large, high-resolution images will produce a larger PDF file. If file size matters — for example, if you're emailing the PDF — consider compressing your images before converting them to PDF, which keeps the resulting document lighter without a noticeable quality loss.",
+      },
+      {
+        type: "h2",
+        text: "When PDF Is Better Than JPG or PNG",
+      },
+      {
+        type: "list",
+        items: [
+          "You have multiple images that need to stay together as one document",
+          "The recipient or form specifically requires a PDF",
+          "You want consistent, predictable printing across different devices",
+          "You're creating something document-like: a portfolio, a report, a scanned form",
+        ],
+      },
+      {
+        type: "p",
+        text: "For a single photo you just want to share or post online, a regular image format is usually simpler — save PDF conversion for when you genuinely need a document.",
+      },
+      {
+        type: "h2",
+        text: "Privacy and Security",
+      },
+      {
+        type: "p",
+        text: "The entire conversion process happens directly in your browser — your images are never uploaded to a server, which matters if the document contains anything sensitive, like an ID, a form, or a scanned contract.",
+      },
+      {
+        type: "p",
+        text: "You can convert JPG or PNG images into a single PDF for free, right in your browser, with our Image to PDF tool. If you need to prepare your images first, our Compress Image and Resize Image tools can help you optimize file size and dimensions beforehand, and Image Health Checker can confirm everything is ready to go.",
+      },
+    ],
+  },
 ];
 
 export function getPostBySlug(slug) {

@@ -98,6 +98,16 @@ function ToolsGrid() {
       badge: "NEW",
       category: "Edit",
     },
+    {
+      icon: "📄",
+      title: "Image to PDF",
+      description:
+        "Convert JPG and PNG images into PDF documents.",
+      path: "/image-to-pdf",
+      color: "danger",
+      badge: "Popular",
+      category: "Convert",
+    },
   ];
 
   // =====================================================
