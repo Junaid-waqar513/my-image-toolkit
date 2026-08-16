@@ -108,6 +108,16 @@ function ToolsGrid() {
       badge: "Popular",
       category: "Convert",
     },
+    {
+      icon: "🔍",
+      title: "SEO & Keyword Checker",
+      description:
+        "Check your title, meta description and content for SEO best practices.",
+      path: "/seo-keyword-checker",
+      color: "primary",
+      badge: "NEW",
+      category: "Edit",
+    },
   ];
 
   // =====================================================

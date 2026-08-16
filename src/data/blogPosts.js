@@ -1590,9 +1590,104 @@ export const blogPosts = [
         type: "p",
         text: "The entire conversion process happens directly in your browser — your images are never uploaded to a server, which matters if the document contains anything sensitive, like an ID, a form, or a scanned contract.",
       },
-      {
+     {
         type: "p",
         text: "You can convert JPG or PNG images into a single PDF for free, right in your browser, with our Image to PDF tool. If you need to prepare your images first, our Compress Image and Resize Image tools can help you optimize file size and dimensions beforehand, and Image Health Checker can confirm everything is ready to go.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-check-blog-post-seo-before-publishing",
+    title: "How to Check Your Blog Post's SEO Before Publishing",
+    description:
+      "A practical checklist for reviewing your title, meta description, keyword usage and readability before hitting publish.",
+    keywords:
+      "check blog post seo, seo checklist before publishing, keyword density checker, meta description length",
+    publishDate: "2026-08-01",
+    readTime: "6 min read",
+    relatedTool: {
+      name: "SEO & Keyword Checker",
+      url: "/seo-keyword-checker",
+    },
+    content: [
+      {
+        type: "p",
+        text: "Writing a great post is only half the job — how you title it, describe it, and structure your keyword usage has a real, measurable effect on whether it actually gets found in search. Here's what to check before you hit publish.",
+      },
+      {
+        type: "h2",
+        text: "1. Title Length",
+      },
+      {
+        type: "p",
+        text: "Google typically displays somewhere around 50-60 characters of a title before truncating it with '...'. A title that's too short wastes an opportunity to include your keyword and context; a title that's too long gets cut off in search results, hiding your value proposition from potential readers.",
+      },
+      {
+        type: "h2",
+        text: "2. Meta Description Length",
+      },
+      {
+        type: "p",
+        text: "Aim for roughly 120-160 characters. This is the snippet shown under your title in search results — it doesn't directly affect ranking, but a compelling, correctly-sized description meaningfully improves click-through rate, which matters for traffic even when rankings stay the same.",
+      },
+      {
+        type: "h2",
+        text: "3. Focus Keyword Placement",
+      },
+      {
+        type: "list",
+        items: [
+          "Does your focus keyword appear in the title?",
+          "Does it appear in the meta description?",
+          "Does it appear within the first 100 words of your content?",
+        ],
+      },
+      {
+        type: "p",
+        text: "These early placements signal to search engines what the page is actually about, and they also reassure human readers scanning the result that they've found the right page.",
+      },
+      {
+        type: "h2",
+        text: "4. Keyword Density — Don't Overdo It",
+      },
+      {
+        type: "p",
+        text: "A healthy keyword density is typically around 0.5% to 2.5% of total word count. Below that range, the keyword may be too sparse for search engines to clearly associate with the page. Above it, the content starts to read as repetitive or spammy — both to readers and to search algorithms, which can actively penalize keyword stuffing.",
+      },
+      {
+        type: "h2",
+        text: "5. Content Length",
+      },
+      {
+        type: "p",
+        text: "There's no single 'correct' word count, but very short content (under 300 words) often struggles to rank for competitive keywords simply because it can't cover a topic in enough depth. Longer, more thorough content tends to naturally attract more relevant keyword variations and answer more of a reader's underlying questions.",
+      },
+      {
+        type: "h2",
+        text: "6. Readability",
+      },
+      {
+        type: "p",
+        text: "Readability scores (like Flesch Reading Ease) estimate how easy your text is to read based on sentence length and word complexity. For most blog content, aiming for 'Standard' to 'Easy' readability keeps your writing accessible to a broad audience — overly complex, dense paragraphs can increase bounce rate even if the content is technically excellent.",
+      },
+      {
+        type: "h2",
+        text: "A Quick Pre-Publish Checklist",
+      },
+      {
+        type: "list",
+        items: [
+          "Title is 30-60 characters and includes your focus keyword",
+          "Meta description is 120-160 characters and includes your focus keyword",
+          "Focus keyword appears within the first 100 words",
+          "Keyword density is roughly 0.5-2.5%",
+          "Content is substantial enough to cover the topic properly (300+ words as a baseline)",
+          "Readability is reasonable for your target audience",
+        ],
+      },
+      {
+        type: "p",
+        text: "You can run through this entire checklist in one place, for free, with our SEO & Keyword Checker — paste in your title, meta description and content, and it scores everything instantly, entirely in your browser.",
       },
     ],
   },

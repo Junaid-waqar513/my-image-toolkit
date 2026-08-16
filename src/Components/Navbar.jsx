@@ -216,6 +216,21 @@ function Navbar() {
                   </NavLink>
 
                 </li>
+                {/* SEO & Keyword Checker */}
+
+                <li>
+
+                  <NavLink
+                    className="dropdown-item fw-semibold"
+                    to="/seo-keyword-checker"
+                  >
+                    🔍 SEO & Keyword Checker
+                    <span className="badge bg-success ms-2">
+                      NEW
+                    </span>
+                  </NavLink>
+
+                </li>
 
                 {/* Divider */}
 

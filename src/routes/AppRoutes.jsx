@@ -24,6 +24,7 @@ const BlogPost = lazy(() => import("../Pages/Blog/BlogPost"));
 const NotFound = lazy(() => import("../Pages/NotFound"));
 const ExifRemoverPage = lazy(() => import("../Pages/ExifRemover"));
 const ImageToPDFPage = lazy(() => import("../Pages/ImageToPDF"));
+const SeoKeywordCheckerPage = lazy(() => import("../Pages/SeoKeywordChecker"));
 function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -105,7 +106,10 @@ function AppRoutes() {
         path="/image-to-pdf"
         element={<ImageToPDFPage />}
       />
-
+<Route
+        path="/seo-keyword-checker"
+        element={<SeoKeywordCheckerPage />}
+      />
       <Route
         path="/blog"
         element={<BlogList />}
