@@ -1,196 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://project4-ashen-one.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/crop-image</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://project4-ashen-one.vercel.app/blog</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/watermark-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/batch-process</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-  <loc>https://project4-ashen-one.vercel.app/image-health-checker</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/about</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
+  <!-- The 12 Main Toolkit Utility Routes -->
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog</loc>
+    <loc>https://project4-ashen-one.vercel.app/compress-image</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/jpg-vs-png-vs-webp-best-image-format-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/resize-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-compress-images-without-losing-quality</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/convert-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-resize-images-for-instagram-facebook-linkedin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/image-health-checker</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-crop-photos-perfectly-social-media-print</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/crop-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
-<url>
-    <loc>https://project4-ashen-one.vercel.app/blog/best-free-image-compressor-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-add-watermark-to-photos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/rotate-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-convert-png-to-jpg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/flip-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/best-image-size-for-websites</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://project4-ashen-one.vercel.app/watermark-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/image-optimization-for-seo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-batch-compress-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/what-is-exif-data-why-remove-it</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/how-to-remove-gps-location-from-photos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/blog/complete-guide-to-imagetoolkit-tools</loc>
+    <loc>https://project4-ashen-one.vercel.app/batch-process</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://project4-ashen-one.vercel.app/exif-remover</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/seo-keyword-checker</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Complete 16-Post Deep Interlinked Blog Content -->
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/complete-guide-to-imagetoolkit-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/jpg-vs-png-vs-webp-best-image-format-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-compress-images-without-losing-quality</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-resize-images-for-instagram-facebook-linkedin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-crop-photos-perfectly-social-media-print</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/best-free-image-compressor-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-add-watermark-to-photos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-convert-png-to-jpg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/best-image-size-for-websites</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/image-optimization-for-seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-batch-compress-images</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/what-is-exif-data-why-remove-it</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-remove-gps-location-from-photos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://project4-ashen-one.vercel.app/blog/how-to-convert-images-to-pdf</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://project4-ashen-one.vercel.app/seo-keyword-checker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://project4-ashen-one.vercel.app/blog/how-to-check-blog-post-seo-before-publishing</loc>
     <changefreq>monthly</changefreq>
