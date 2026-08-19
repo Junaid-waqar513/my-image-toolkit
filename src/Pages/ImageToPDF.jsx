@@ -48,15 +48,16 @@ function ImageToPDFPage() {
   return (
     <>
       <SEO
-        title="Image to PDF Converter — Convert JPG, PNG to PDF Free"
-        description="Convert JPG, PNG and other images to PDF online for free. Combine multiple images into one PDF directly in your browser."
-        keywords="image to pdf, jpg to pdf, png to pdf, convert image to pdf, image to pdf converter, jpg pdf converter"
+        title="Free Instant Image to PDF Converter (No Uploads) | ImageToolkit"
+        description="Convert JPG, PNG and other images to PDF online for free. Combine multiple images into one PDF safely directly inside your browser with zero server uploads."
+        keywords="image to pdf, convert image to pdf, free image to pdf converter, batch image to pdf no upload, picture to pdf browser"
         canonical={`${SITE_URL}/image-to-pdf`}
+        path="/image-to-pdf"
         schema={combineSchemas(
           toolSchema({
-            name: "Image to PDF Converter",
+            name: "Free Instant Image to PDF Converter",
             description:
-              "Convert JPG, PNG and other images to PDF online for free, combining multiple images into one document.",
+              "Convert JPG, PNG and other images to PDF online for free, combining multiple images into one document safely in your browser.",
             url: `${SITE_URL}/image-to-pdf`,
           }),
           breadcrumbSchema("Image to PDF", `${SITE_URL}/image-to-pdf`),
@@ -65,10 +66,20 @@ function ImageToPDFPage() {
       />
 
       <Navbar />
+      
+      {/* Visual Header Enhancement to reduce bounce rates and catch immediate intent */}
+      <header className="container text-center pt-5 pb-2">
+        <h1 className="display-5 fw-bold text-dark mb-2">⚡ Free Instant Image to PDF Converter</h1>
+        <p className="lead text-muted mx-auto" style={{ maxWidth: "650px" }}>
+          Combine multiple JPG, PNG, or WebP images into a single clean PDF document. 
+          Processed 100% locally inside your browser for maximum privacy.
+        </p>
+      </header>
+
       <ImageToPDF />
 
-      {/* FAQ */}
-      <section className="container pb-5">
+      {/* FAQ Section */}
+      <section className="container pb-5 mt-4">
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <h2 className="h3 fw-bold text-center mb-4">
             Frequently Asked Questions

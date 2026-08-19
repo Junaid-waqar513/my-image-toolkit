@@ -5,6 +5,8 @@ import { compressImage } from "../utils/compress";
 import { convertImage } from "../utils/convert";
 import { addWatermark } from "../utils/watermark";
 
+const MAX_BATCH_IMAGES = 5;
+
 export default function useBatchProcess() {
 
   // ===========================
@@ -31,7 +33,188 @@ export default function useBatchProcess() {
     useState([]);
 
   // ===========================
-  // Batch Processing
+  // Batch Limit Modal
+  // ===========================
+
+  const [isLimitModalOpen, setIsLimitModalOpen] =
+    useState(false);
+
+  const [pendingCount, setPendingCount] =
+    useState(0);
+
+  const [pendingParams, setPendingParams] =
+    useState(null);
+
+  // ===========================
+  // Core Processing Loop
+  // (runs on whatever image array it's given)
+  // ===========================
+
+  const runBatch = async (
+
+    imagesToProcess,
+
+    width,
+
+    height,
+
+    quality,
+
+    format,
+
+    watermarkText,
+
+    setLoading,
+
+    setProgress
+
+  ) => {
+
+    try {
+
+      setLoading(true);
+
+      setProgress(0);
+
+      const results = [];
+
+      for (let i = 0; i < imagesToProcess.length; i++) {
+
+        console.log("==================================");
+        console.log("Processing:", imagesToProcess[i].file.name);
+
+        let currentFile = imagesToProcess[i].file;
+
+        // Resize
+
+        if (batchResize) {
+          console.log("➡ Starting Resize");
+
+          currentFile = await resizeImage(
+            currentFile,
+            width,
+            height
+          );
+
+          console.log("✅ Resize Completed");
+        }
+
+        // Compress
+
+        if (batchCompress) {
+          console.log("➡ Starting Compression");
+
+          currentFile = await compressImage(
+            currentFile,
+            quality / 100
+          );
+
+          console.log("✅ Compression Completed");
+        }
+
+        // Convert
+
+        if (batchConvert) {
+          console.log("➡ Starting Convert");
+
+          currentFile = await convertImage(
+            currentFile,
+            format
+          );
+
+          console.log("✅ Convert Completed");
+        }
+
+        // Watermark
+
+        if (
+          batchWatermark &&
+          watermarkText.trim()
+        ) {
+          console.log("➡ Starting Watermark");
+
+          currentFile = await addWatermark(
+            currentFile,
+            watermarkText
+          );
+
+          console.log("✅ Watermark Completed");
+        }
+
+        console.log("🎉 Image Finished");
+
+        results.push({
+
+          original: imagesToProcess[i],
+
+          processed: currentFile,
+
+          originalSize:
+            imagesToProcess[i].file.size,
+
+          processedSize:
+            currentFile.size,
+
+          operations: {
+
+            resize: batchResize,
+
+            compress: batchCompress,
+
+            convert: batchConvert,
+
+            watermark: batchWatermark,
+
+          },
+
+        });
+
+        setProgress(
+
+          Math.round(
+
+            ((i + 1) / imagesToProcess.length) * 100
+
+          )
+
+        );
+
+      }
+
+      setBatchResults(results);
+
+    }
+
+    catch (error) {
+
+      console.error(
+
+        "Batch Processing Error:",
+
+        error
+
+      );
+
+      alert(
+
+        "Batch processing failed."
+
+      );
+
+    }
+
+    finally {
+
+      setLoading(false);
+
+      setProgress(0);
+
+    }
+
+  };
+
+  // ===========================
+  // Entry Point (checks the limit first)
   // ===========================
 
   const handleBatchProcess = async (
@@ -79,142 +262,74 @@ export default function useBatchProcess() {
 
     }
 
-    try {
+    if (images.length > MAX_BATCH_IMAGES) {
 
-      setLoading(true);
+      setPendingCount(images.length);
 
-      setProgress(0);
+      setPendingParams({
+        images,
+        width,
+        height,
+        quality,
+        format,
+        watermarkText,
+        setLoading,
+        setProgress,
+      });
 
-      const results = [];
+      setIsLimitModalOpen(true);
 
-      for (let i = 0; i < images.length; i++) {
-
-        console.log("==================================");
-console.log("Processing:", images[i].file.name);
-
-let currentFile = images[i].file;
-        // Resize
-
-        if (batchResize) {
-  console.log("➡ Starting Resize");
-
-  currentFile = await resizeImage(
-    currentFile,
-    width,
-    height
-  );
-
-  console.log("✅ Resize Completed");
-}
-        // Compress
-
-       if (batchCompress) {
-  console.log("➡ Starting Compression");
-
-  currentFile = await compressImage(
-    currentFile,
-    quality / 100
-  );
-
-  console.log("✅ Compression Completed");
-}
-
-        // Convert
-
-        if (batchConvert) {
-  console.log("➡ Starting Convert");
-
-  currentFile = await convertImage(
-    currentFile,
-    format
-  );
-
-  console.log("✅ Convert Completed");
-}
-
-        // Watermark
-
-       if (
-  batchWatermark &&
-  watermarkText.trim()
-) {
-  console.log("➡ Starting Watermark");
-
-  currentFile = await addWatermark(
-    currentFile,
-    watermarkText
-  );
-
-  console.log("✅ Watermark Completed");
-}
-console.log("🎉 Image Finished");
-        results.push({
-
-          original: images[i],
-
-          processed: currentFile,
-
-          originalSize:
-            images[i].file.size,
-
-          processedSize:
-            currentFile.size,
-
-          operations: {
-
-            resize: batchResize,
-
-            compress: batchCompress,
-
-            convert: batchConvert,
-
-            watermark: batchWatermark,
-
-          },
-
-        });
-
-        setProgress(
-
-          Math.round(
-
-            ((i + 1) / images.length) * 100
-
-          )
-
-        );
-
-      }
-
-      setBatchResults(results);
+      return;
 
     }
 
-    catch (error) {
+    await runBatch(
+      images,
+      width,
+      height,
+      quality,
+      format,
+      watermarkText,
+      setLoading,
+      setProgress
+    );
 
-      console.error(
+  };
 
-        "Batch Processing Error:",
+  // ===========================
+  // Called when the user accepts the
+  // "process first 5 for free" option
+  // ===========================
 
-        error
+  const confirmLimitedBatch = async () => {
 
-      );
+    setIsLimitModalOpen(false);
 
-      alert(
+    if (!pendingParams) return;
 
-        "Batch processing failed."
+    const {
+      images,
+      width,
+      height,
+      quality,
+      format,
+      watermarkText,
+      setLoading,
+      setProgress,
+    } = pendingParams;
 
-      );
+    await runBatch(
+      images.slice(0, MAX_BATCH_IMAGES),
+      width,
+      height,
+      quality,
+      format,
+      watermarkText,
+      setLoading,
+      setProgress
+    );
 
-    }
-
-    finally {
-
-      setLoading(false);
-
-      setProgress(0);
-
-    }
+    setPendingParams(null);
 
   };
 
@@ -236,6 +351,12 @@ console.log("🎉 Image Finished");
     setBatchResults,
 
     handleBatchProcess,
+
+    // Limit modal
+
+    isLimitModalOpen,
+    pendingCount,
+    confirmLimitedBatch,
 
   };
 

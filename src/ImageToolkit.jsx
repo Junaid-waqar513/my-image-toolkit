@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import BatchLimitModal from "./Components/BatchLimitModal";
 import Navbar from "./Components/Navbar";
 // =======================
 // Layout Components
@@ -181,19 +181,20 @@ function App({ defaultTool = "compress" }) {
   // Batch Processing
   // =======================
   const {
-    batchResize,
-    setBatchResize,
-    batchCompress,
-    setBatchCompress,
-    batchConvert,
-    setBatchConvert,
-    batchWatermark,
-    setBatchWatermark,
-    batchResults,
-    setBatchResults,
-    handleBatchProcess,
-  } = useBatchProcess();
-
+  batchResize,
+  setBatchResize,
+  batchCompress,
+  setBatchCompress,
+  batchConvert,
+  setBatchConvert,
+  batchWatermark,
+  setBatchWatermark,
+  batchResults,
+  handleBatchProcess,
+  isLimitModalOpen,
+  pendingCount,
+  confirmLimitedBatch,
+} = useBatchProcess();
   // =======================
   // Downloads
   // =======================
@@ -686,6 +687,12 @@ useEffect(() => {
     <BatchResults
       batchResults={batchResults}
     />
+
+    <BatchLimitModal
+        isOpen={isLimitModalOpen}
+        onClose={confirmLimitedBatch}
+        fileCount={pendingCount}
+      />
 
     {/* =======================
         Footer
