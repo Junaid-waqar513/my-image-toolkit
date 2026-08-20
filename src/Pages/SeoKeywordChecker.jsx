@@ -2,9 +2,11 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import SeoKeywordChecker from "../Components/SeoKeywordChecker";
 import SEO from "../seo/SEO";
+import AdDisplay from "../Components/AdDisplay"; // 1. Imported your clean ad component
 import { toolSchema, breadcrumbSchema, faqSchema, combineSchemas } from "../seo/schema";
 
-const SITE_URL = "https://vercel.app";
+// Corrected from generic fallback to your live domain layout path configuration
+const SITE_URL = "https://project4-ashen-one.vercel.app";
 
 const seoCheckerFaqs = [
   {
@@ -61,7 +63,15 @@ function SeoKeywordCheckerPage() {
         </p>
       </header>
 
-      <SeoKeywordChecker />
+      <div className="container">
+        {/* 2. PLACEMENT 1: High-visibility horizontal banner layout above the text box input zone */}
+        <AdDisplay slot="TOP_SEO_CHECKER_SLOT_ID" format="horizontal" />
+
+        <SeoKeywordChecker />
+
+        {/* 3. PLACEMENT 2: Dynamic adaptive display banner beneath the workspace analysis dashboard */}
+        <AdDisplay slot="BOTTOM_SEO_CHECKER_SLOT_ID" format="auto" />
+      </div>
 
       {/* FAQ Section to earn rich Google search results */}
       <section className="container pb-5 mt-5">
