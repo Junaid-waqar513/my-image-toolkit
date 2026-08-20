@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import BlogCTA from "../../Components/BlogCTA"; // 1. Imported your separate new CTA component
 import SEO from "../../seo/SEO";
 import {
   blogPostSchema,
@@ -194,6 +195,17 @@ function BlogPost() {
           <h1 className="fw-bold mb-4">
             {post.title}
           </h1>
+
+          {/* =================================================
+              HIGH CONVERTING INLINE BLOG BANNER
+              2. Placed immediately beneath the title to grab fast traffic clicks
+          ================================================= */}
+          {post.relatedTool && (
+            <BlogCTA 
+              toolName={post.relatedTool.name} 
+              toolUrl={post.relatedTool.url} 
+            />
+          )}
 
           {/* =================================================
               ARTICLE CONTENT
