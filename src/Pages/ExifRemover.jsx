@@ -2,6 +2,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import ExifRemover from "../Components/ExifRemover";
 import SEO from "../seo/SEO";
+import AdDisplay from "../Components/AdDisplay"; // 1. Imported your clean ad component
 import { toolSchema, breadcrumbSchema, faqSchema, combineSchemas } from "../seo/schema";
 
 const SITE_URL = "https://project4-ashen-one.vercel.app";
@@ -61,7 +62,15 @@ function ExifRemoverPage() {
         </p>
       </header>
 
-      <ExifRemover />
+      <div className="container">
+        {/* 2. PLACEMENT 1: High-visibility horizontal banner layout above the upload box */}
+        <AdDisplay slot="TOP_EXIF_REMOVER_SLOT_ID" format="horizontal" />
+
+        <ExifRemover />
+
+        {/* 3. PLACEMENT 2: Dynamic adaptive display banner beneath the workspace module */}
+        <AdDisplay slot="BOTTOM_EXIF_REMOVER_SLOT_ID" format="auto" />
+      </div>
 
       {/* FAQ Section to earn rich Google search results */}
       <section className="container pb-5 mt-5">
