@@ -10,6 +10,10 @@ const SEO = ({
   keywords =
     "image compressor, batch resize images, webp to jpg, image to pdf, remove exif metadata, free online image tools",
 
+  // Preferred: an absolute canonical URL, e.g. "https://project4-ashen-one.vercel.app/compress-image"
+  canonical,
+
+  // Legacy/fallback: a relative path, e.g. "/compress-image", used only if `canonical` isn't given
   path = "",
 
   // Optional custom image for social sharing
@@ -17,6 +21,10 @@ const SEO = ({
 
   // Optional page type
   type = "website",
+
+  // Optional structured data: a single schema object, or an array of schema objects
+  // (e.g. the return value of combineSchemas() in seo/schema.js)
+  schema,
 }) => {
   const siteUrl = "https://project4-ashen-one.vercel.app";
 
@@ -25,10 +33,17 @@ const SEO = ({
     path && !path.startsWith("/") ? `/${path}` : path;
 
   // Remove trailing slash except for homepage
-  const fullUrl =
+  const pathBasedUrl =
     normalizedPath === ""
       ? siteUrl
       : `${siteUrl}${normalizedPath.replace(/\/$/, "")}`;
+
+  // An explicit `canonical` prop always wins over the derived path-based URL.
+  const fullUrl = canonical || pathBasedUrl;
+
+  // Normalize schema into a flat array so callers can pass either a single
+  // object or an array (combineSchemas already returns an array).
+  const schemaList = Array.isArray(schema) ? schema : schema ? [schema] : [];
 
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
@@ -163,6 +178,21 @@ const SEO = ({
         name="theme-color"
         content="#0f172a"
       />
+
+      {/* =====================================================
+          STRUCTURED DATA (JSON-LD)
+          Renders any schema.org objects passed via the `schema` prop
+          (see src/seo/schema.js for the generator functions).
+      ===================================================== */}
+
+      {schemaList.map((schemaObj, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+        >
+          {JSON.stringify(schemaObj)}
+        </script>
+      ))}
     </Helmet>
   );
 };

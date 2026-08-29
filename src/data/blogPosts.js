@@ -1,4 +1,4 @@
-export const blogPosts = [
+const corePosts = [
   {
     slug: "jpg-vs-png-vs-webp-best-image-format-2026",
     title: "JPG vs PNG vs WEBP: Best Image Format for Web in 2026",
@@ -1692,6 +1692,299 @@ export const blogPosts = [
     ],
   },
 ];
+
+const additionalPosts = [
+  {
+    slug: "how-to-convert-heic-to-jpg",
+    title: "How to Convert HEIC to JPG Online (iPhone Photos) — Free & Private",
+    description:
+      "iPhone photos won't open on your Windows PC or upload to a website? Here's why HEIC causes problems and how to convert it to JPG in seconds, right in your browser.",
+    keywords:
+      "convert heic to jpg, heic to jpg online, iphone photos won't open, heic converter free, open heic on windows",
+    publishDate: "2026-08-12",
+    readTime: "4 min read",
+    relatedTool: {
+      name: "Convert Image",
+      url: "/convert-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "If you've ever AirDropped or emailed a photo from an iPhone to a Windows PC and gotten a file that won't open, or tried to upload it to a website and hit an error, you've run into HEIC. It's Apple's default photo format since iOS 11, and while it works great on Apple devices, a lot of the rest of the internet still doesn't fully support it.",
+      },
+      {
+        type: "h2",
+        text: "Why HEIC Causes Problems",
+      },
+      {
+        type: "p",
+        text: "HEIC (High Efficiency Image Format) stores photos at roughly half the file size of an equivalent JPG with comparable quality, which is why Apple made it the default. The tradeoff is compatibility. Older versions of Windows can't preview HEIC files without an extra codec, many websites and upload forms reject them outright, and some apps simply don't recognize the format at all.",
+      },
+      {
+        type: "h2",
+        text: "The Fix: Convert to JPG",
+      },
+      {
+        type: "p",
+        text: "JPG is the one format that's guaranteed to open anywhere — every browser, every operating system, every upload form on the internet. Converting a HEIC photo to JPG solves the compatibility problem instantly, and for a single photo you're viewing or sharing, the difference in file size rarely matters.",
+      },
+      {
+        type: "list",
+        items: [
+          "Drop your HEIC file (or a batch of them) into the Convert Image tool.",
+          "Select JPG as the output format.",
+          "Download the converted file — done in seconds, nothing leaves your device.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Is It Safe to Convert in a Browser?",
+      },
+      {
+        type: "p",
+        text: "Yes. The conversion happens entirely on your own device using your browser's built-in image processing — your photos are never uploaded to a server. That matters more than it might seem: plenty of \"free HEIC converter\" sites quietly upload your images to process them remotely, which is worth avoiding for personal photos.",
+      },
+      {
+        type: "h2",
+        text: "A Quick Note on Quality",
+      },
+      {
+        type: "p",
+        text: "Converting HEIC to JPG is technically a lossy step, since JPG uses different compression than HEIC. In practice, at high quality settings the difference is invisible to the eye for normal viewing and sharing. If you're archiving photos for long-term storage where every bit matters, keep the original HEIC as a backup and convert a copy.",
+      },
+      {
+        type: "links",
+        title: "Related Guides",
+        links: [
+          {
+            title: "JPG vs PNG vs WEBP",
+            url: "/blog/jpg-vs-png-vs-webp-best-image-format-2026",
+            description: "Not sure which format to convert to? Start here.",
+          },
+          {
+            title: "How to Convert PNG to JPG",
+            url: "/blog/how-to-convert-png-to-jpg",
+            description: "The same idea, for a different source format.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-resize-image-under-2mb",
+    title: "How to Resize an Image to Under 2MB (or Any File Size Limit)",
+    description:
+      "Job portals, government forms, and application uploads often cap file size at 2MB or less. Here's the fastest way to get any photo under the limit without guesswork.",
+    keywords:
+      "resize image to 2mb, reduce photo size for upload, image under 2mb, file size limit photo, compress photo for application",
+    publishDate: "2026-08-13",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Resize Image",
+      url: "/resize-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "You're filling out a job application, a visa form, or a college portal, and it demands a photo \"under 2MB\" — but your phone's camera photo is 6MB, 8MB, sometimes more. This is one of the most common frustrations with modern photos, and it's a quick fix once you understand the two levers that actually control file size.",
+      },
+      {
+        type: "h2",
+        text: "Two Ways to Shrink a File: Dimensions and Compression",
+      },
+      {
+        type: "p",
+        text: "File size is driven by two independent things: how many pixels the image contains (its dimensions) and how much the pixel data is compressed. A 4000×3000 pixel photo straight off a phone camera is enormous mostly because of its dimensions, not because it's poorly compressed. Shrinking the dimensions has a much bigger effect on file size than compression alone.",
+      },
+      {
+        type: "h2",
+        text: "The Fastest Route to a Specific Limit",
+      },
+      {
+        type: "list",
+        items: [
+          "Resize the image down first — most upload forms only need something in the 800–1600 pixel range, far smaller than a phone camera's native resolution.",
+          "Then compress at a moderate quality setting if it's still over the limit.",
+          "Check the resulting file size before uploading, so you're not guessing.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Resizing first, then compressing, gets you to a target file size much faster than compression alone — trying to hit 2MB through compression settings on a full-resolution photo often means visible quality loss, when the real problem was just that the image was far bigger than it needed to be in the first place.",
+      },
+      {
+        type: "h2",
+        text: "What Portals Actually Need",
+      },
+      {
+        type: "p",
+        text: "Most forms that display your photo (profile pictures, ID uploads, application photos) show it at a fairly small size on screen — a few hundred pixels wide is typical. There's rarely any visual benefit to uploading a multi-megapixel original, and doing so just means slower uploads and more failed submissions when you hit the size cap.",
+      },
+      {
+        type: "p",
+        text: "Our Resize Image tool lets you set exact pixel dimensions or a target file size, and everything happens locally in your browser — no upload, no waiting on a server, and no account required.",
+      },
+      {
+        type: "links",
+        title: "Related Guides",
+        links: [
+          {
+            title: "How to Compress Images Without Losing Quality",
+            url: "/blog/how-to-compress-images-without-losing-quality",
+            description: "The compression half of the equation, explained in depth.",
+          },
+          {
+            title: "How to Reduce Image Size for Email Attachments",
+            url: "/blog/how-to-reduce-image-size-for-email-attachments",
+            description: "The same principle, applied to email size limits.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-compress-png-for-wordpress",
+    title: "How to Compress PNG Images for WordPress Without Losing Quality",
+    description:
+      "Large PNGs are one of the biggest causes of a slow WordPress site. Here's how to compress them properly before you upload, without hurting sharpness or transparency.",
+    keywords:
+      "compress png for wordpress, wordpress image too large, reduce png file size, wordpress site speed images, optimize png before upload",
+    publishDate: "2026-08-14",
+    readTime: "5 min read",
+    relatedTool: {
+      name: "Compress Image",
+      url: "/compress-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "If a WordPress site speed test keeps flagging \"large image file sizes,\" there's a good chance PNG screenshots or graphics are the culprit. PNG is lossless, which makes it the right choice for logos, icons, and screenshots — but it also means file sizes can balloon quickly, especially for anything with a lot of detail or a wide color range.",
+      },
+      {
+        type: "h2",
+        text: "Why PNGs Get So Large",
+      },
+      {
+        type: "p",
+        text: "PNG's lossless compression preserves every pixel exactly, which is great for sharp edges and transparency but terrible for file size on photo-like content. A PNG screenshot with lots of gradients or a busy background can easily be five to ten times larger than a JPG or WEBP of the same image, and every one of those extra kilobytes adds to your page load time.",
+      },
+      {
+        type: "h2",
+        text: "Before You Upload, Do This",
+      },
+      {
+        type: "list",
+        items: [
+          "Ask whether you actually need transparency. If not, converting to JPG or WEBP first will shrink the file far more than PNG compression alone.",
+          "If you do need transparency (logos, icons, product cutouts), compress the PNG itself — modern PNG compressors can often cut file size by 40–70% with no visible difference.",
+          "Resize to the actual display dimensions. A PNG uploaded at 3000px wide for a spot that displays at 600px wastes bandwidth for every visitor.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why This Matters for WordPress Specifically",
+      },
+      {
+        type: "p",
+        text: "Page speed is a ranking factor, and WordPress sites — especially ones built with page builders and lots of featured images — are particularly prone to accumulating oversized PNGs in the media library. Compressing images before you upload them is more reliable than relying on a caching plugin to fix it after the fact, since plugin-based optimization varies a lot in how aggressive it actually is.",
+      },
+      {
+        type: "p",
+        text: "Our Compress Image tool keeps transparency intact while shrinking file size, works on PNG, JPG and WEBP, and runs entirely in your browser — so there's no upload step slowing you down before you even get to WordPress.",
+      },
+      {
+        type: "links",
+        title: "Related Guides",
+        links: [
+          {
+            title: "Image Optimization for SEO",
+            url: "/blog/image-optimization-for-seo",
+            description: "The bigger picture on how images affect your rankings.",
+          },
+          {
+            title: "Best Image Size for Websites",
+            url: "/blog/best-image-size-for-websites",
+            description: "Get your dimensions right, not just your compression.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-fix-sideways-rotated-photos",
+    title: "Why Is My Photo Sideways? How to Fix Rotated Images",
+    description:
+      "A photo that looks fine on your phone but shows up sideways everywhere else isn't corrupted — it's an EXIF orientation quirk. Here's what's happening and how to fix it for good.",
+    keywords:
+      "photo is sideways, fix rotated image, why does my photo rotate itself, exif orientation, image showing sideways on website",
+    publishDate: "2026-08-15",
+    readTime: "4 min read",
+    relatedTool: {
+      name: "Rotate Image",
+      url: "/rotate-image",
+    },
+    content: [
+      {
+        type: "p",
+        text: "You take a photo holding your phone sideways, it looks perfectly upright in your camera roll, and then you upload it somewhere — an email, a website, a document — and suddenly it's rotated 90 degrees. It's a strange, common problem, and it's almost never a corrupted file. It's EXIF orientation data.",
+      },
+      {
+        type: "h2",
+        text: "What's Actually Happening",
+      },
+      {
+        type: "p",
+        text: "Most phone cameras don't physically rotate the pixel data when you take a photo at an angle. Instead, they save the image in its original sensor orientation and add a small piece of metadata — an EXIF orientation tag — that tells compatible software \"display this rotated by 90/180/270 degrees.\" Your phone's gallery app reads that tag correctly and shows the photo upright. Plenty of other software, especially older tools, web platforms, and some editing programs, ignores it and shows the raw, un-rotated image instead.",
+      },
+      {
+        type: "h2",
+        text: "Why This Causes Inconsistent Behavior",
+      },
+      {
+        type: "p",
+        text: "This is exactly why the same photo can look correct in one app and sideways in another — it depends entirely on whether that particular piece of software respects the EXIF orientation tag. It's inconsistent, confusing, and one of the most common photo-related support questions for any site that accepts image uploads.",
+      },
+      {
+        type: "h2",
+        text: "The Permanent Fix",
+      },
+      {
+        type: "p",
+        text: "The reliable fix is to physically rotate the image pixels to match how it should look, rather than relying on metadata that some software will honor and some won't. Once the pixels themselves are rotated correctly, the photo displays upright everywhere, regardless of whether the destination reads EXIF data.",
+      },
+      {
+        type: "list",
+        items: [
+          "Open the photo in the Rotate Image tool.",
+          "Rotate it to the correct orientation — the change is applied to the actual pixel data, not just a metadata flag.",
+          "Download it. It will now display correctly everywhere, on every platform.",
+        ],
+      },
+      {
+        type: "p",
+        text: "This runs entirely in your browser, so there's no upload step and no waiting — just drop the photo in, rotate, and download.",
+      },
+      {
+        type: "links",
+        title: "Related Guides",
+        links: [
+          {
+            title: "What Is EXIF Data and Why Remove It?",
+            url: "/blog/what-is-exif-data-why-remove-it",
+            description: "More on what's hiding in your photo's metadata.",
+          },
+          {
+            title: "How to Crop Photos Perfectly",
+            url: "/blog/how-to-crop-photos-perfectly-social-media-print",
+            description: "Another common fix once your photo is right-side up.",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const blogPosts = [...corePosts, ...additionalPosts];
 
 export function getPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug);

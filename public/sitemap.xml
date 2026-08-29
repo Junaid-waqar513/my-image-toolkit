@@ -171,5 +171,25 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-convert-heic-to-jpg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-resize-image-under-2mb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-compress-png-for-wordpress</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/blog/how-to-fix-sideways-rotated-photos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
