@@ -6,10 +6,14 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 import FAQ from "../Components/FAQ";
 import FeaturedTools from "../Components/FeaturedTools";
 import RelatedTools from "../Components/RelatedTools";
+import PrivacyBadge from "../Components/PrivacyBadge";
+import ToolInfoSection from "../Components/ToolInfoSection";
 function ToolPageLayout({
   title,
   description,
   children,
+  faqs,
+  info,
 }) {
   return (
     <>
@@ -38,6 +42,8 @@ function ToolPageLayout({
               {description}
             </p>
 
+            <PrivacyBadge align="start" />
+
           </div>
 
         </section>
@@ -54,6 +60,8 @@ function ToolPageLayout({
 
         </section>
 
+        <ToolInfoSection content={info} />
+
         <RelatedTools />
 
         <HowItWorks />
@@ -61,7 +69,7 @@ function ToolPageLayout({
 
         <FeaturedTools />
 
-        <FAQ />
+        <FAQ faqs={faqs} />
 
       </main>
 

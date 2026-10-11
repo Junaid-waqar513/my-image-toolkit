@@ -2,6 +2,9 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import ExifRemover from "../Components/ExifRemover";
 import SEO from "../seo/SEO";
+import PrivacyBadge from "../Components/PrivacyBadge";
+import ToolInfoSection from "../Components/ToolInfoSection";
+import { toolContent } from "../data/toolContent";
 import AdDisplay from "../Components/AdDisplay"; // 1. Imported your clean ad component
 import { toolSchema, breadcrumbSchema, faqSchema, combineSchemas } from "../seo/schema";
 
@@ -60,6 +63,7 @@ function ExifRemoverPage() {
           Strip hidden camera settings, device properties, and precise GPS tracking tags from your photos. 
           Processed entirely offline in your browser for absolute data protection.
         </p>
+        <PrivacyBadge />
       </header>
 
       <div className="container">
@@ -73,6 +77,8 @@ function ExifRemoverPage() {
       </div>
 
       {/* FAQ Section to earn rich Google search results */}
+      <ToolInfoSection content={toolContent.exif} />
+
       <section className="container pb-5 mt-5">
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <h2 className="h3 fw-bold text-center mb-4">

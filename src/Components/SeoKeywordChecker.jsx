@@ -239,7 +239,7 @@ function SeoKeywordChecker() {
       <div className="text-center mb-5">
         <span className="badge bg-primary px-3 py-2 mb-3">🔍 SEO Tool</span>
 
-        <h1 className="display-5 fw-bold">SEO & Keyword Checker</h1>
+        <h2 className="display-5 fw-bold">SEO & Keyword Checker</h2>
 
         <p className="lead text-muted mx-auto" style={{ maxWidth: 760 }}>
           Check your title, meta description and content for SEO best

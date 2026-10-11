@@ -1,6 +1,7 @@
 import ToolPageLayout from "../Layout/ToolPageLayout";
 import ImageToolkit from "../ImageToolkit";
 import SEO from "../seo/SEO";
+import { toolContent } from "../data/toolContent";
 import { toolSchema, breadcrumbSchema, combineSchemas } from "../seo/schema";
 
 function WatermarkImage() {
@@ -27,6 +28,7 @@ function WatermarkImage() {
       <ToolPageLayout
         title="Watermark Image"
         description="Add text watermark to your images."
+        info={toolContent.watermark}
       >
         <ImageToolkit defaultTool="effects" />
       </ToolPageLayout>

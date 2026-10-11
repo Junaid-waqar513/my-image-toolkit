@@ -25,6 +25,11 @@ function ImagePreview({
 
       img.src = image.preview;
     });
+    // `dimensions` is intentionally omitted — it's only read here as a guard
+    // to skip images already measured. Including it would re-run this
+    // effect every time a dimension is set, right after this effect is the
+    // thing that sets it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [images]);
 
   const removeImage = (indexToRemove) => {

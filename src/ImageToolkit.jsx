@@ -190,6 +190,7 @@ function App({ defaultTool = "compress" }) {
   batchWatermark,
   setBatchWatermark,
   batchResults,
+  setBatchResults,
   handleBatchProcess,
   isLimitModalOpen,
   pendingCount,

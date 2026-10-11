@@ -1,6 +1,7 @@
 import ToolPageLayout from "../Layout/ToolPageLayout";
 import ImageToolkit from "../ImageToolkit";
 import SEO from "../seo/SEO";
+import { toolContent } from "../data/toolContent";
 import { toolSchema, breadcrumbSchema, combineSchemas } from "../seo/schema";
 
 function BatchProcess() {
@@ -27,6 +28,7 @@ function BatchProcess() {
       <ToolPageLayout
         title="Batch Image Processing"
         description="Resize, compress and convert multiple images."
+        info={toolContent.batch}
       >
         <ImageToolkit defaultTool="batch" />
       </ToolPageLayout>

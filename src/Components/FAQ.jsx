@@ -1,7 +1,11 @@
 import { homeFaqs } from "../seo/schema";
 
-function FAQ() {
-  const faqs = homeFaqs;
+// Accepts an optional `faqs` list so each tool page can show its own
+// specific, technical questions instead of every page rendering the same
+// generic 5 questions (which was hurting SEO — Google saw identical FAQ
+// content repeated verbatim across Compress/Resize/Convert/Crop/etc).
+// Falls back to the generic homepage FAQ list when no custom list is given.
+function FAQ({ faqs = homeFaqs }) {
 
   return (
     <section className="py-5">

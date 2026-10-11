@@ -2,6 +2,9 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import ImageToPDF from "../Components/ImageToPDF";
 import SEO from "../seo/SEO";
+import PrivacyBadge from "../Components/PrivacyBadge";
+import ToolInfoSection from "../Components/ToolInfoSection";
+import { toolContent } from "../data/toolContent";
 import AdDisplay from "../Components/AdDisplay"; // 1. Imported your clean ad component
 import { toolSchema, breadcrumbSchema, faqSchema, combineSchemas } from "../seo/schema";
 
@@ -75,6 +78,7 @@ function ImageToPDFPage() {
           Combine multiple JPG, PNG, or WebP images into a single clean PDF document. 
           Processed 100% locally inside your browser for maximum privacy.
         </p>
+        <PrivacyBadge />
       </header>
 
       <div className="container">
@@ -88,6 +92,8 @@ function ImageToPDFPage() {
       </div>
 
       {/* FAQ Section */}
+      <ToolInfoSection content={toolContent.pdf} />
+
       <section className="container pb-5 mt-4">
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <h2 className="h3 fw-bold text-center mb-4">

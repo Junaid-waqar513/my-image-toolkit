@@ -16,7 +16,7 @@ const AdDisplay = ({ slot, format = 'auto', responsive = 'true' }) => {
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-YOUR_ADSENSE_CLIENT_ID" // Replace with your real ID later
+        data-ad-client="ca-pub-2690067690290428"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={responsive}

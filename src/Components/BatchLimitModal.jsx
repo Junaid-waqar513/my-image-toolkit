@@ -1,4 +1,5 @@
 import React from 'react';
+import { SUPPORT_URL } from '../config/support';
 
 const BatchLimitModal = ({ isOpen, onClose, fileCount }) => {
   if (!isOpen) return null;
@@ -28,13 +29,13 @@ const BatchLimitModal = ({ isOpen, onClose, fileCount }) => {
           </div>
           <div className="modal-footer border-0 d-flex flex-column gap-2 pb-4 px-4">
             <a 
-              href="https://buymeacoffee.com" 
+              href={SUPPORT_URL} 
               target="_blank" 
               rel="noreferrer" 
               className="btn btn-warning w-100 fw-bold py-2 shadow-sm"
               style={{ borderRadius: '8px' }}
             >
-              Buy Me a Coffee & Process All
+              ☕ Support the Developer
             </a>
             <button 
               type="button" 

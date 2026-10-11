@@ -207,8 +207,6 @@ function ImageToPDF() {
         const printableWidth = pageWidth - marginMm * 2;
         const printableHeight = pageHeight - marginMm * 2;
 
-        const imageAspect = image.width / image.height;
-
         let drawWidth;
         let drawHeight;
 
@@ -233,7 +231,6 @@ function ImageToPDF() {
         const y = (pageHeight - drawHeight) / 2;
 
         // jsPDF needs a data URL, not a blob URL
-        // eslint-disable-next-line no-await-in-loop
         const dataUrl = await fileToDataUrl(image.file);
 
         const format = image.file.type.includes("png") ? "PNG" : "JPEG";
@@ -297,7 +294,7 @@ function ImageToPDF() {
       <div className="text-center mb-5">
         <span className="badge bg-primary px-3 py-2 mb-3">📄 Document Tool</span>
 
-        <h1 className="display-5 fw-bold">Image to PDF Converter</h1>
+        <h2 className="display-5 fw-bold">Image to PDF Converter</h2>
 
         <p className="lead text-muted mx-auto" style={{ maxWidth: 760 }}>
           Convert JPG, PNG and other images into a PDF document online for

@@ -1696,9 +1696,9 @@ const corePosts = [
 const additionalPosts = [
   {
     slug: "how-to-convert-heic-to-jpg",
-    title: "How to Convert HEIC to JPG Online (iPhone Photos) — Free & Private",
+    title: "Convert HEIC to JPG Online — Free & Private",
     description:
-      "iPhone photos won't open on your Windows PC or upload to a website? Here's why HEIC causes problems and how to convert it to JPG in seconds, right in your browser.",
+      "iPhone photos won't open on Windows or upload to a website? Here's why HEIC causes problems and how to convert it to JPG in seconds in your browser.",
     keywords:
       "convert heic to jpg, heic to jpg online, iphone photos won't open, heic converter free, open heic on windows",
     publishDate: "2026-08-12",
@@ -1772,9 +1772,9 @@ const additionalPosts = [
   },
   {
     slug: "how-to-resize-image-under-2mb",
-    title: "How to Resize an Image to Under 2MB (or Any File Size Limit)",
+    title: "How to Resize an Image to Under 2MB",
     description:
-      "Job portals, government forms, and application uploads often cap file size at 2MB or less. Here's the fastest way to get any photo under the limit without guesswork.",
+      "Job portals and application forms often cap uploads at 2MB. Here's the fastest way to get any photo under the limit without guesswork or quality loss.",
     keywords:
       "resize image to 2mb, reduce photo size for upload, image under 2mb, file size limit photo, compress photo for application",
     publishDate: "2026-08-13",
@@ -1844,9 +1844,9 @@ const additionalPosts = [
   },
   {
     slug: "how-to-compress-png-for-wordpress",
-    title: "How to Compress PNG Images for WordPress Without Losing Quality",
+    title: "How to Compress PNG Images for WordPress",
     description:
-      "Large PNGs are one of the biggest causes of a slow WordPress site. Here's how to compress them properly before you upload, without hurting sharpness or transparency.",
+      "Large PNGs are a top cause of a slow WordPress site. Here's how to compress them properly before uploading, without hurting sharpness or transparency.",
     keywords:
       "compress png for wordpress, wordpress image too large, reduce png file size, wordpress site speed images, optimize png before upload",
     publishDate: "2026-08-14",
@@ -1912,9 +1912,9 @@ const additionalPosts = [
   },
   {
     slug: "how-to-fix-sideways-rotated-photos",
-    title: "Why Is My Photo Sideways? How to Fix Rotated Images",
+    title: "Why Is My Photo Sideways? How to Fix It",
     description:
-      "A photo that looks fine on your phone but shows up sideways everywhere else isn't corrupted — it's an EXIF orientation quirk. Here's what's happening and how to fix it for good.",
+      "A photo that looks fine on your phone but shows up sideways elsewhere isn't corrupted — it's an EXIF orientation quirk. Here's how to fix it for good.",
     keywords:
       "photo is sideways, fix rotated image, why does my photo rotate itself, exif orientation, image showing sideways on website",
     publishDate: "2026-08-15",

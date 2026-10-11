@@ -30,6 +30,9 @@ import ImageHealthChecker from "./Pages/ImageHealthChecker";
 import ExifRemover from "./Pages/ExifRemover";
 import ImageToPDF from "./Pages/ImageToPDF";
 import SeoKeywordChecker from "./Pages/SeoKeywordChecker";
+import CompressTo50KB from "./Pages/CompressTo50KB";
+import CompressTo100KB from "./Pages/CompressTo100KB";
+import FaviconGenerator from "./Pages/FaviconGenerator";
 import NotFound from "./Pages/NotFound";
 
 // Mirrors src/routes/AppRoutes.jsx, minus React.lazy(). Using real
@@ -56,6 +59,9 @@ function PrerenderRoutes() {
       <Route path="/exif-remover" element={<ExifRemover />} />
       <Route path="/image-to-pdf" element={<ImageToPDF />} />
       <Route path="/seo-keyword-checker" element={<SeoKeywordChecker />} />
+      <Route path="/compress-image-to-50kb" element={<CompressTo50KB />} />
+      <Route path="/compress-image-to-100kb" element={<CompressTo100KB />} />
+      <Route path="/favicon-generator" element={<FaviconGenerator />} />
       <Route path="/blog" element={<BlogList />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="*" element={<NotFound />} />

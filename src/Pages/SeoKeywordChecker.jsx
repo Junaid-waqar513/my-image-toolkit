@@ -2,6 +2,9 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import SeoKeywordChecker from "../Components/SeoKeywordChecker";
 import SEO from "../seo/SEO";
+import PrivacyBadge from "../Components/PrivacyBadge";
+import ToolInfoSection from "../Components/ToolInfoSection";
+import { toolContent } from "../data/toolContent";
 import AdDisplay from "../Components/AdDisplay"; // 1. Imported your clean ad component
 import { toolSchema, breadcrumbSchema, faqSchema, combineSchemas } from "../seo/schema";
 
@@ -61,6 +64,7 @@ function SeoKeywordCheckerPage() {
           Audit your website titles, meta tags, and copy layouts before publishing. 
           Grade text readability and measure exact keyword densities 100% locally in your browser.
         </p>
+        <PrivacyBadge text="Your text and drafts never leave your browser" />
       </header>
 
       <div className="container">
@@ -74,6 +78,8 @@ function SeoKeywordCheckerPage() {
       </div>
 
       {/* FAQ Section to earn rich Google search results */}
+      <ToolInfoSection content={toolContent.seo} />
+
       <section className="container pb-5 mt-5">
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <h2 className="h3 fw-bold text-center mb-4">

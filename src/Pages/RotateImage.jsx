@@ -1,6 +1,7 @@
 import ToolPageLayout from "../Layout/ToolPageLayout";
 import ImageToolkit from "../ImageToolkit";
 import SEO from "../seo/SEO";
+import { toolContent } from "../data/toolContent";
 import { toolSchema, breadcrumbSchema, combineSchemas } from "../seo/schema";
 
 function RotateImage() {
@@ -26,6 +27,7 @@ function RotateImage() {
       <ToolPageLayout
         title="Rotate Image"
         description="Rotate images online."
+        info={toolContent.rotate}
       >
         <ImageToolkit defaultTool="edit" />
       </ToolPageLayout>

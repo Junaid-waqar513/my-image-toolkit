@@ -39,6 +39,9 @@ async function getRoutes(vite) {
     "/exif-remover",
     "/image-to-pdf",
     "/seo-keyword-checker",
+    "/compress-image-to-50kb",
+    "/compress-image-to-100kb",
+    "/favicon-generator",
     "/blog",
   ];
 

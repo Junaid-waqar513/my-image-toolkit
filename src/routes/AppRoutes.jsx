@@ -25,6 +25,9 @@ const NotFound = lazy(() => import("../Pages/NotFound"));
 const ExifRemoverPage = lazy(() => import("../Pages/ExifRemover"));
 const ImageToPDFPage = lazy(() => import("../Pages/ImageToPDF"));
 const SeoKeywordCheckerPage = lazy(() => import("../Pages/SeoKeywordChecker"));
+const CompressTo50KBPage = lazy(() => import("../Pages/CompressTo50KB"));
+const CompressTo100KBPage = lazy(() => import("../Pages/CompressTo100KB"));
+const FaviconGeneratorPage = lazy(() => import("../Pages/FaviconGenerator"));
 function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -109,6 +112,18 @@ function AppRoutes() {
 <Route
         path="/seo-keyword-checker"
         element={<SeoKeywordCheckerPage />}
+      />
+      <Route
+        path="/compress-image-to-50kb"
+        element={<CompressTo50KBPage />}
+      />
+      <Route
+        path="/compress-image-to-100kb"
+        element={<CompressTo100KBPage />}
+      />
+      <Route
+        path="/favicon-generator"
+        element={<FaviconGeneratorPage />}
       />
       <Route
         path="/blog"

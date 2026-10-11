@@ -94,6 +94,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/compress-image-to-50kb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/compress-image-to-100kb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://project4-ashen-one.vercel.app/favicon-generator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Complete 16-Post Deep Interlinked Blog Content -->
   <url>

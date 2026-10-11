@@ -74,7 +74,7 @@ function ExifRemover() {
                   lens: parsed.LensModel || null,
                 };
               }
-            } catch (error) {
+            } catch {
               // No EXIF data, or the format doesn't carry any.
               metadata = null;
             }
@@ -284,9 +284,9 @@ function ExifRemover() {
           🔒 Privacy Tool
         </span>
 
-        <h1 className="display-5 fw-bold">
+        <h2 className="display-5 fw-bold">
           EXIF Metadata Remover
-        </h1>
+        </h2>
 
         <p className="lead text-muted mx-auto" style={{ maxWidth: 760 }}>
           Remove hidden EXIF data — including camera info and GPS

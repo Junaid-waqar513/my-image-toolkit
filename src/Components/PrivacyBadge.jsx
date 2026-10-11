@@ -1,21 +1,30 @@
 import React from 'react';
 
-const PrivacyBadge = () => {
+// Small trust badge shown under each tool's title.
+// `text` can be overridden for tools that handle text instead of files.
+const PrivacyBadge = ({
+  text = 'Your files never touch a server',
+  align = 'center',
+}) => {
   return (
-    <div 
-      className="alert alert-success d-flex align-items-center justify-content-center mx-auto my-3 p-2 border-0" 
-      style={{ 
-        maxWidth: '550px', 
-        fontSize: '0.85rem', 
-        borderRadius: '8px',
-        backgroundColor: '#e8f5e9',
-        color: '#1b5e20'
-      }}
-      role="alert"
+    <div
+      className={`d-flex ${align === 'start' ? 'justify-content-start' : 'justify-content-center'} my-3`}
     >
-      <span className="me-2" style={{ fontSize: '1.1rem' }}>🔒</span>
-      <div>
-        <strong>100% Client-Side Privacy:</strong> Your images are processed entirely inside your web browser. Files are never uploaded to our servers.
+      <div
+        className="d-inline-flex align-items-center px-3 py-2"
+        style={{
+          fontSize: '0.9rem',
+          borderRadius: '999px',
+          backgroundColor: '#e8f5e9',
+          color: '#1b5e20',
+          border: '1px solid #c8e6c9',
+        }}
+        role="note"
+      >
+        <span className="me-2" aria-hidden="true">🔒</span>
+        <span>
+          <strong>100% Privacy-Friendly:</strong> {text}
+        </span>
       </div>
     </div>
   );

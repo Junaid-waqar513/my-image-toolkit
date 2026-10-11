@@ -1,6 +1,7 @@
 import ToolPageLayout from "../Layout/ToolPageLayout";
 import ImageToolkit from "../ImageToolkit";
 import SEO from "../seo/SEO";
+import { toolContent } from "../data/toolContent";
 import { toolSchema, breadcrumbSchema, combineSchemas } from "../seo/schema";
 
 function FlipImage() {
@@ -24,6 +25,7 @@ function FlipImage() {
       <ToolPageLayout
         title="Flip Image"
         description="Flip images horizontally or vertically."
+        info={toolContent.flip}
       >
         <ImageToolkit defaultTool="edit" />
       </ToolPageLayout>

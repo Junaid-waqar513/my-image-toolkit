@@ -1,3 +1,4 @@
+import PrivacyBadge from "./PrivacyBadge";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
@@ -1232,6 +1233,8 @@ ${seo.title}`;
           Then optimize your image instantly.
         </p>
 
+        <PrivacyBadge />
+
       </div>
 
       {/* =================================================
@@ -1628,8 +1631,6 @@ ${seo.title}`;
             <div className="row g-4">
 
               {results.map((image) => {
-                const health = calculateHealthBreakdown(image);
-
                 const performanceScore =
                   calculatePerformanceScore(
                     image
